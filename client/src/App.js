@@ -5,6 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Loading from "./components/Loading/Loading";
 
 const ViewHome = React.lazy(() => import("./pages/ViewHome"));
+const ViewMaintenance = React.lazy(() =>
+  import("./pages/Services/ViewMaintenance")
+);
+const ViewMachining = React.lazy(() =>
+  import("./pages/Services/ViewMachining")
+);
 
 function App() {
   return (
@@ -12,6 +18,9 @@ function App() {
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<ViewHome />} />
+          <Route path="/maintenance" element={<ViewMaintenance />} />
+          <Route path="/machining" element={<ViewMachining />} />
+          <Route path="/loading" element={<Loading />} />
         </Routes>
       </Suspense>
     </>

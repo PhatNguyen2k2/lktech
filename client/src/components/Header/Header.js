@@ -10,10 +10,10 @@ const Header = () => {
   return (
     <Navbar key={"lg"} bg="light" expand={"lg"} className="mb-3">
       <Container fluid>
-        <Navbar.Brand className="logoBranch" href="#">
+        <Navbar.Brand className="logoBranch" href="/">
           <img
             className="logo"
-            src="https://res.cloudinary.com/dixoiu9xw/image/upload/v1675915894/lktechLogo_ztckda.png"
+            src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022120/logo_zxf49n.png"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${"lg"}`} />
@@ -29,7 +29,7 @@ const Header = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="flex-grow-1 pe-3">
-              <Nav.Link href="#action1">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#action2">Link</Nav.Link>
               <NavDropdown
                 title="Dropdown"

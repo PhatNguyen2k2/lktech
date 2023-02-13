@@ -19,10 +19,10 @@ const Footer = () => {
           <ul className="ulService">
             <strong>DỊCH VỤ HỖ TRỢ</strong>
             <li>
-              <a href="#"> Bảo trì</a>
+              <a href="/maintenance"> Bảo trì</a>
             </li>
             <li>
-              <a href="#">Gia công Hàn & Cắt Laser</a>
+              <a href="/machining">Gia công Hàn & Cắt Laser</a>
             </li>
             <li>
               <a href="#">Tư vấn & thi công hệ thống khí</a>

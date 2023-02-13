@@ -1,0 +1,47 @@
+.footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  background-color: #fafafa;
+  display: flex;
+  font-family: "Playfair Display", serif;
+  .introduce {
+    width: 35%;
+    // border: 1px solid black;
+    .ulIntro {
+      list-style-type: none;
+      li {
+        line-height: 35px;
+        margin-left: 5px;
+      }
+    }
+  }
+  .service {
+    // border: 1px solid blue;
+    width: 35%;
+    position: relative;
+    .ulService {
+      list-style-type: none;
+      position: absolute;
+      //   background-color: aquamarine;
+      inset-inline-end: 50px;
+      li {
+        line-height: 35px;
+        margin-left: 5px;
+      }
+    }
+  }
+  .info {
+    // border: 1px solid violet;
+    width: 30%;
+    position: relative;
+    .ulInfo {
+      list-style-type: none;
+      position: absolute;
+      inset-inline-end: 30px;
+      li {
+        line-height: 35px;
+        margin-left: 5px;
+      }
+    }
+  }
+}

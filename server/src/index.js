@@ -14,35 +14,35 @@ db.connect();
 
 app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(
-    cors({
-        credentials: true,
-        origin: [
-            'http://localhost:3000',
-            'http://localhost:8080',
-            'http://localhost:4200'
-        ]
-    })
+  cors({
+    credentials: true,
+    origin: [
+      'http://localhost:3000',
+      'http://localhost:8080',
+      'http://localhost:4200'
+    ]
+  })
 );
 //http logger
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
-    session({
-        secret: process.env.SESSION_SECRET,
-        resave: true,
-        saveUninitialized: false,
-        cookie: {
-            maxAge: 1000 * 60 * 60 * 24 * 10,
-            httpOnly: true,
-            sameSite: 'lax',
-            secure: false
-        }
-    })
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24 * 10,
+      httpOnly: true,
+      sameSite: 'lax',
+      secure: false
+    }
+  })
 );
 
 //Routes init
 route(app);
 
 app.listen(port, () => {
-    console.log(`App listening on port ${port}`);
+  console.log(`App listening on port ${port}`);
 });

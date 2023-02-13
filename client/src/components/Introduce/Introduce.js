@@ -5,7 +5,7 @@ import "./Introduce.scss";
 const Introduce = () => {
   return (
     <Container fluid="xxl">
-      <h1>Giới thiệu về bướm</h1>
+      <h1>Giới thiệu về bướm của Fát</h1>
       <div className="intro">
         <div className="introImg">
           <img
@@ -35,7 +35,6 @@ const Introduce = () => {
           </p>
         </div>
       </div>
-      <h1>RIBÙ RÍBU</h1>
     </Container>
   );
 };

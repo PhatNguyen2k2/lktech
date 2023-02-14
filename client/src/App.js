@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import "animate.css/animate.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Loading from "./components/Loading/Loading";
 

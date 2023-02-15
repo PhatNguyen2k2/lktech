@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import "./Banner.scss";
 
 const Banner = () => {
@@ -27,7 +28,7 @@ const Banner = () => {
         setBtnChange(btnChange + 1);
         setCount(count + 1);
       }
-    }, 3000);
+    }, 4000);
   }, [count]);
   return (
     <Container fluid="xxl">
@@ -46,9 +47,16 @@ const Banner = () => {
               className="imageLaser"
               src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676049422/image-removebg-preview_rjjnbc.png"
             />
+
             <div className="bannerDescription">
-              <h1>Laser bướm</h1>
-              <h2>Super bướm, bạn của moị nhà</h2>
+              <AnimationOnScroll
+                initiallyVisible={true}
+                animateIn="animate__backInLeft"
+                duration={0.4}
+              >
+                <h1>Laser </h1>
+                <h2>Super laser, bạn của mọi nhà</h2>
+              </AnimationOnScroll>
             </div>
             <button id="btnOne" type="button">
               Laser
@@ -62,11 +70,14 @@ const Banner = () => {
               src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676086379/Kh%C3%AD_vzoz4f.png"
             />
             <div className="bannerDescriptionKhi">
-              <h1>Khí</h1>
-              <h2>
-                Super khí, bạn của moị nhà bướm bướm bướm bướm bướm bướm bướm
-                bướm bướm
-              </h2>
+              <AnimationOnScroll
+                initiallyVisible={true}
+                animateIn="animate__backInRight"
+                duration={0.4}
+              >
+                <h1>Khí</h1>
+                <h2>Super khí, bạn của mọi nhà</h2>
+              </AnimationOnScroll>
             </div>
             <button id="btnTwo" type="button">
               Khí
@@ -80,8 +91,14 @@ const Banner = () => {
               src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022018/hoachat-removebg-preview_v2mbdk.png"
             />
             <div className="bannerDescription">
-              <h1>Hóa chất</h1>
-              <h2>Super hóa chất, bạn của moị nhà</h2>
+              <AnimationOnScroll
+                initiallyVisible={true}
+                animateIn="animate__backInLeft"
+                duration={0.4}
+              >
+                <h1>Hóa chất</h1>
+                <h2>Super hóa chất, bạn của mọi nhà</h2>
+              </AnimationOnScroll>
             </div>
             <button id="btnThree" type="button">
               Hóa chất

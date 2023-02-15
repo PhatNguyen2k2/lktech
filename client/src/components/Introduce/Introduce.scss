@@ -1,8 +1,13 @@
+.title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  margin-top: 50px;
+}
 .intro {
   background-color: #eeeeee;
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px;
   width: 100%;
   .introImg {
     width: 50%;

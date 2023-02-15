@@ -12,38 +12,32 @@ const Service = (props) => {
     <Container style={{ backgroundColor: "#eeeeee" }} fluid="xxl">
       {type === "maintenance" && (
         <>
-          <AnimationOnScroll
-            initiallyVisible={true}
-            animateOut="animate__fadeOutDown"
-            duration={0.4}
-          >
-            <div className="maintenance">
-              <div className="text1">
-                <p>
-                  <strong>
-                    L&K Tech chuyên cung cấp dịch vụ bảo trì, bảo dưỡng và sửa
-                    chữa nguồn các loại máy hàn công nghiệp như: MIG, TIG, Laser
-                    và máy cắt Plasma, laser, … với đội ngũ kỹ thuật lành nghề
-                    trên 10 năm kinh nghiệm, trình độ chuyên môn kỹ thuật cao.
-                    Chúng tôi sẽ luôn có mặt để tư vấn, bảo trì, hỗ trợ duy trì
-                    độ bền của máy hàn, phòng ngừa hư hỏng có thể xảy ra trong
-                    quá trình sử dụng.
-                  </strong>
-                  <br /> <br />
-                  L&K Tech sẽ kiểm tra, bảo trì máy hàn, máy cắt theo đúng
-                  khuyến cáo và quy định của hãng sản xuất; cung cấp thiết bị,
-                  phụ tùng phục vụ cho công tác sửa chữa, thay thế, bảo dưỡng
-                  (nếu khách hàng yêu cầu).
-                </p>
-              </div>
-              <div className="image1">
-                <img
-                  className="img"
-                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676344689/mayhan_twbmqx.jpg"
-                />
-              </div>
+          <div className="maintenance">
+            <div className="text1">
+              <p>
+                <strong>
+                  L&K Tech chuyên cung cấp dịch vụ bảo trì, bảo dưỡng và sửa
+                  chữa nguồn các loại máy hàn công nghiệp như: MIG, TIG, Laser
+                  và máy cắt Plasma, laser, … với đội ngũ kỹ thuật lành nghề
+                  trên 10 năm kinh nghiệm, trình độ chuyên môn kỹ thuật cao.
+                  Chúng tôi sẽ luôn có mặt để tư vấn, bảo trì, hỗ trợ duy trì độ
+                  bền của máy hàn, phòng ngừa hư hỏng có thể xảy ra trong quá
+                  trình sử dụng.
+                </strong>
+                <br /> <br />
+                L&K Tech sẽ kiểm tra, bảo trì máy hàn, máy cắt theo đúng khuyến
+                cáo và quy định của hãng sản xuất; cung cấp thiết bị, phụ tùng
+                phục vụ cho công tác sửa chữa, thay thế, bảo dưỡng (nếu khách
+                hàng yêu cầu).
+              </p>
             </div>
-          </AnimationOnScroll>
+            <div className="image1">
+              <img
+                className="img"
+                src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676344689/mayhan_twbmqx.jpg"
+              />
+            </div>
+          </div>
           <AnimationOnScroll
             animateIn="animate__fadeInUp"
             animateOut="animate__fadeOutDown"
@@ -127,42 +121,36 @@ const Service = (props) => {
 
       {type === "machining" && (
         <>
-          <AnimationOnScroll
-            initiallyVisible={true}
-            animateOut="animate__fadeOutDown"
-            duration={0.4}
-          >
-            <div className="maintenance">
-              <div className="text1">
-                <p>
-                  <strong>
-                    Công nghệ gia công hàn & cắt laser đang rất thịnh hành trong
-                    cuộc sống hiện nay. Để tìm được cơ sở cung cấp dịch vụ gia
-                    công hàn & cắt laser không phải điều quá khó, tuy nhiên một
-                    địa chỉ uy tín, chất lượng đòi hỏi khách hàng phải tìm hiểu
-                    thật kỹ.
-                  </strong>
-                  <br />
-                  Nếu bạn cần tìm đơn vị cắt gia công hàn và cắt laser uy tín,
-                  đảm bảo chất lượng hàn cắt và giao hàng đúng hẹn. Nếu bạn
-                  không hài lòng với đơn vị đang gia công cho bạn và cần tìm nơi
-                  làm việc bài bản hơn để hợp tác lâu dài. Thì L&K Tech có thể
-                  đáp ứng nhu cầu của bạn.
-                  <br />
-                  Với hệ thống máy hàn, máy cắt laser hiện đại với công nghệ mới
-                  nhất cùng đội ngũ kỹ sư nhiều năm kinh nghiệm trong ngành cơ
-                  khí chúng tôi sẽ mang đến cho Quý khách sản phẩm chính xác,
-                  nét cắt đẹp và giá cả phù hợp nhất.
-                </p>
-              </div>
-              <div className="image1">
-                <img
-                  className="img"
-                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676305760/gia-cong-han-cat_duemei.jpg"
-                />
-              </div>
+          <div className="maintenance">
+            <div className="text1">
+              <p>
+                <strong>
+                  Công nghệ gia công hàn & cắt laser đang rất thịnh hành trong
+                  cuộc sống hiện nay. Để tìm được cơ sở cung cấp dịch vụ gia
+                  công hàn & cắt laser không phải điều quá khó, tuy nhiên một
+                  địa chỉ uy tín, chất lượng đòi hỏi khách hàng phải tìm hiểu
+                  thật kỹ.
+                </strong>
+                <br />
+                Nếu bạn cần tìm đơn vị cắt gia công hàn và cắt laser uy tín, đảm
+                bảo chất lượng hàn cắt và giao hàng đúng hẹn. Nếu bạn không hài
+                lòng với đơn vị đang gia công cho bạn và cần tìm nơi làm việc
+                bài bản hơn để hợp tác lâu dài. Thì L&K Tech có thể đáp ứng nhu
+                cầu của bạn.
+                <br />
+                Với hệ thống máy hàn, máy cắt laser hiện đại với công nghệ mới
+                nhất cùng đội ngũ kỹ sư nhiều năm kinh nghiệm trong ngành cơ khí
+                chúng tôi sẽ mang đến cho Quý khách sản phẩm chính xác, nét cắt
+                đẹp và giá cả phù hợp nhất.
+              </p>
             </div>
-          </AnimationOnScroll>
+            <div className="image1">
+              <img
+                className="img"
+                src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676305760/gia-cong-han-cat_duemei.jpg"
+              />
+            </div>
+          </div>
           <AnimationOnScroll
             animateIn="animate__fadeInUp"
             animateOut="animate__fadeOutDown"
@@ -270,33 +258,27 @@ const Service = (props) => {
 
       {type === "advice" && (
         <>
-          <AnimationOnScroll
-            initiallyVisible={true}
-            animateOut="animate__fadeOutDown"
-            duration={0.4}
-          >
-            <div className="maintenance">
-              <div className="text1">
-                <p>
-                  <strong>
-                    Ngoài việc cung cấp các sản phẩm riêng lẻ, L&K Tech còn cung
-                    cấp dịch vụ tư vấn và thi công hệ thống đường ống khí phòng
-                    thí nghiệm và công nghiệp. Với đội ngũ kỹ sư nhiều năm kinh
-                    nghiệm trong ngành cung cấp khí, L&K Tech cung cấp giải pháp
-                    trọn gói cho khách hàng nhằm giúp khách tối ưu nhất chi phí
-                    bao gồm cung cấp vật tư, thiết kế và thi công. Khách hàng
-                    không cần tốn công để tìm nhiều nơi.
-                  </strong>
-                </p>
-              </div>
-              <div className="image1">
-                <img
-                  className="img"
-                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676343536/he-thong-khi-3_qmbos5.png"
-                />
-              </div>
+          <div className="maintenance">
+            <div className="text1">
+              <p>
+                <strong>
+                  Ngoài việc cung cấp các sản phẩm riêng lẻ, L&K Tech còn cung
+                  cấp dịch vụ tư vấn và thi công hệ thống đường ống khí phòng
+                  thí nghiệm và công nghiệp. Với đội ngũ kỹ sư nhiều năm kinh
+                  nghiệm trong ngành cung cấp khí, L&K Tech cung cấp giải pháp
+                  trọn gói cho khách hàng nhằm giúp khách tối ưu nhất chi phí
+                  bao gồm cung cấp vật tư, thiết kế và thi công. Khách hàng
+                  không cần tốn công để tìm nhiều nơi.
+                </strong>
+              </p>
             </div>
-          </AnimationOnScroll>
+            <div className="image1">
+              <img
+                className="img"
+                src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676343536/he-thong-khi-3_qmbos5.png"
+              />
+            </div>
+          </div>
           <AnimationOnScroll
             animateIn="animate__fadeInUp"
             animateOut="animate__fadeOutDown"

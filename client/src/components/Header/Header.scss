@@ -23,3 +23,17 @@
     }
   }
 }
+.search {
+  width: 35%;
+  margin-top: 5px;
+  position: relative;
+  .searchBar {
+    width: 100%;
+  }
+  .image {
+    position: absolute;
+    width: 6%;
+    right: 20px;
+    top: 6px;
+  }
+}

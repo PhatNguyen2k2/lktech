@@ -5,7 +5,7 @@ import "./Introduce.scss";
 const Introduce = () => {
   return (
     <Container fluid="xxl">
-      <h1>Giới thiệu về bướm của Fát</h1>
+      <h1 className="title">Giới thiệu về công ty</h1>
       <div className="intro">
         <div className="introImg">
           <img

@@ -2,8 +2,8 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import Form from "react-bootstrap/Form";
 import "./Header.scss";
 
 const Header = () => {
@@ -58,6 +58,20 @@ const Header = () => {
                 Tin tức
               </Nav.Link>
             </Nav>
+            <div className="search">
+              <Form className="d-flex searchBar">
+                <Form.Control
+                  type="search"
+                  placeholder="Search"
+                  className="me-2"
+                  aria-label="Search"
+                />
+              </Form>
+              <img
+                className="image"
+                src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676458324/icons8-search-50_v5np4d.png"
+              />
+            </div>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>

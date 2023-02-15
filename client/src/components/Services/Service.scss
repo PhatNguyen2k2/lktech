@@ -6,6 +6,7 @@
   background-color: #eeeeee;
   .text1 {
     width: 45%;
+    margin-top: 10px;
     text-align: justify;
     padding-right: 20px;
     ul {
@@ -14,6 +15,8 @@
   }
   .image1 {
     width: 55%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     .img {
       width: 100%;
       height: 55vh;
@@ -29,6 +32,9 @@
     text-align: justify;
     padding-left: 20px;
   }
+  .text9 {
+    margin-bottom: 10px;
+  }
   .image2 {
     width: 55%;
     .img {
@@ -42,7 +48,4 @@
       }
     }
   }
-}
-.machining {
-  display: flex;
 }

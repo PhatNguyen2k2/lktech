@@ -25,7 +25,7 @@ const Footer = () => {
               <a href="/machining">Gia công Hàn & Cắt Laser</a>
             </li>
             <li>
-              <a href="#">Tư vấn & thi công hệ thống khí</a>
+              <a href="/advice">Tư vấn & thi công hệ thống khí</a>
             </li>
           </ul>
         </div>
@@ -33,7 +33,7 @@ const Footer = () => {
           <ul className="ulInfo">
             <strong>THÔNG TIN CHÚNG TÔI</strong>
             <li>Email: khoa.le@lktech.com.vn</li>
-            <li>090 777 3041(Mr.Khoa) </li>
+            <li>090 777 3041 (Mr.Khoa) </li>
           </ul>
         </div>
       </div>

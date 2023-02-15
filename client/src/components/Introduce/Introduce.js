@@ -25,11 +25,13 @@ const Introduce = () => {
             tạo cập nhập không ngừng nghỉ. Với những chuyên viên có kinh nghiệm
             nhiều năm trong lĩnh vực cơ khí. Cùng với tiêu chí hoạt động năng
             suất, chúng tôi đảm bảo bạn có thể có được những trải nghiệm tuyệt
-            vời nhất khi sử dụng các dịch vụ của chúng tôi. <hr />
+            vời nhất khi sử dụng các dịch vụ của chúng tôi.
+          </p>
+          <p>
             Các loại sản phẩm của chúng tôi hiện nay: <br />
             + Laser: Cung cấp các loại máy hàn, máy cắt laser, ... <br />+ Khí:
             Cung cấp sản phẩm khí công nghiệp, khí y tế, khí phân tích, khí
-            chuẩn… Tư vấn, thiết kế, thi công và lắp đặt hệ thống cung cấp khí{" "}
+            chuẩn… Tư vấn, thiết kế, thi công và lắp đặt hệ thống cung cấp khí
             <br />+ Hoá chất: Cung cấp các giải pháp và hoá chất ngành xi mạ,
             chăn nuôi, cao su…
           </p>

@@ -28,22 +28,35 @@ const Header = () => {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="flex-grow-1 pe-3">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
-              <NavDropdown
-                title="Dropdown"
-                id={`offcanvasNavbarDropdown-expand-${"lg"}`}
-              >
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
+            <Nav className="flex-grow-1 pe-3 textMenu">
+              <Nav.Link href="/" className="textOne">
+                <img
+                  className="image"
+                  src="https://cdn.discordapp.com/attachments/906188184357048332/1075058701704118282/icons8-home-page.gif"
+                />{" "}
+                Trang chủ
+              </Nav.Link>
+              <Nav.Link href="/" className="textOne">
+                <img
+                  className="img"
+                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676388942/971530365710Management_noaeqp.gif"
+                />{" "}
+                Sản phẩm
+              </Nav.Link>
+              <Nav.Link href="/" className="textOne">
+                <img
+                  className="image"
+                  src="https://cdn.discordapp.com/attachments/906188184357048332/1075061597929734235/icons8-handshake.gif"
+                />{" "}
+                Đối tác
+              </Nav.Link>
+              <Nav.Link href="/" className="textOne">
+                <img
+                  className="img"
+                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676389179/196770094540Center_Alignment_zsjhbx.gif"
+                />{" "}
+                Tin tức
+              </Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

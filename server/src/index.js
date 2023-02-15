@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
+const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const app = express();
@@ -25,6 +26,7 @@ app.use(
 );
 //http logger
 app.use(express.json());
+app.use(morgan('combined'));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   session({

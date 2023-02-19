@@ -43,7 +43,7 @@ const Header = () => {
                 />{" "}
                 Sản phẩm
               </Nav.Link>
-              <Nav.Link href="/" className="textOne">
+              <Nav.Link href="/partners" className="textOne">
                 <img
                   className="image"
                   src="https://cdn.discordapp.com/attachments/906188184357048332/1075061597929734235/icons8-handshake.gif"

@@ -38,7 +38,7 @@ const Banner = () => {
           muted
           loop
           className="video"
-          src="https://res.cloudinary.com/dwpjjpgrz/video/upload/v1676022850/khoi_dlctkd.mp4"
+          src="https://res.cloudinary.com/dwpjjpgrz/video/upload/v1676654109/banh-rang-56376_cwwcnf.mp4"
           type="video/mp4"
         />
         {btnChange === 1 && (

@@ -13,7 +13,6 @@ class PartnerController {
   }
   //[POST] /partners/create
   async create(req, res) {
-    console.log(req.body);
     const partner = new Partner(req.body);
     partner
       .save()

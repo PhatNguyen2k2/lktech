@@ -6,7 +6,7 @@
   font-family: "Playfair Display", serif;
   .introduce {
     width: 35%;
-    // border: 1px solid black;
+
     .ulIntro {
       list-style-type: none;
       li {
@@ -16,13 +16,12 @@
     }
   }
   .service {
-    // border: 1px solid blue;
     width: 35%;
     position: relative;
     .ulService {
       list-style-type: none;
       position: absolute;
-      //   background-color: aquamarine;
+
       inset-inline-end: 50px;
       li {
         line-height: 35px;
@@ -38,7 +37,6 @@
     }
   }
   .info {
-    // border: 1px solid violet;
     width: 30%;
     position: relative;
     .ulInfo {

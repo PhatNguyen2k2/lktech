@@ -18,15 +18,15 @@ const Partners = () => {
   return (
     <Container fluid="xxl">
       <div className="PartnerIntro">
-        <h3>
+        <p>
           Với thiện chí hợp tác cùng phát triển, L&K TECH rất tin tưởng vào sự
           thành công tốt đẹp và lâu dài trong quá trình hợp tác giữa công ty và
           Quý đối tác.
-        </h3>
-        <h3>
+        </p>
+        <p>
           Xin chân thành cảm ơn các Quý đối tác đã và đang hợp tác cùng công ty
           chúng tôi trên đoạn đường phát triển.
-        </h3>
+        </p>
       </div>
       {partners.length > 0 &&
         partners.map((partner) => (

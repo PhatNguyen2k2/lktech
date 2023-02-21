@@ -9,6 +9,7 @@
   align-items: center;
   margin-top: 10px;
   width: 100%;
+  flex-wrap: wrap;
   .introImg {
     width: 50%;
     .image {
@@ -28,5 +29,49 @@
     padding-right: 10px;
     color: black;
     font-family: "Playfair Display", serif;
+  }
+  @media only screen and (max-width: 1050px) {
+    .introImg {
+      width: 100%;
+      margin-left: 0;
+      .image {
+        height: auto;
+      }
+    }
+    .introText {
+      width: 100%;
+      margin-top: 15px;
+      margin-left: 0;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .introImg {
+      width: 100%;
+      margin-left: 0;
+      .image {
+        height: auto;
+      }
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .introImg {
+      width: 100%;
+      margin-left: 0;
+      .image {
+        height: auto;
+      }
+    }
+    .introText {
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 250px) {
+    .introImg {
+      width: 100%;
+      margin-left: 0;
+      .image {
+        height: auto;
+      }
+    }
   }
 }

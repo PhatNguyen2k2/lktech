@@ -37,15 +37,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p
-        style={{
-          textAlign: "center",
-          backgroundColor: "#e1e1e1",
-          fontFamily: '"Playfair Display", serif',
-        }}
-      >
-        &#169; 2020 Công Ty TNHH L&K TECH
-      </p>
+      <p className="belowFooter">&#169; 2020 Công Ty TNHH L&K TECH</p>
     </>
   );
 };

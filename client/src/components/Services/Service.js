@@ -87,7 +87,7 @@ const Service = (props) => {
                   Với quy trình làm việc chuyên nghiệp và bài bản, hệ thống máy
                   móc, thiết bị của bạn sẽ được bảo trì chất lượng. Cụ thể:
                 </p>
-                <ul>
+                <ul style={{ listStyle: "none" }}>
                   <li>
                     <strong>Bước 1:</strong> Tiếp nhận yêu cầu, khảo sát tình
                     trạng máy móc để tư vấn dịch vụ bảo trì hoặc sửa chữa phù
@@ -344,7 +344,7 @@ const Service = (props) => {
                   L&K Tech cung cấp dịch vụ thi công lắp đặt hệ thống khí với
                   quy trình làm việc chuyên nghiệp bao gồm các bước sau:
                 </p>
-                <ul>
+                <ul style={{ listStyle: "none" }}>
                   <li>
                     <strong>Bước 1:</strong> Tiếp nhận thông tin và yêu cầu của
                     khách hàng về dịch vụ thi công lắp đặt hệ thống khí nén.

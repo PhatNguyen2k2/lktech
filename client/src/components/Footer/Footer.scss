@@ -4,9 +4,9 @@
   background-color: #fafafa;
   display: flex;
   font-family: "Playfair Display", serif;
+  flex-wrap: wrap;
   .introduce {
-    width: 35%;
-
+    width: 45%;
     .ulIntro {
       list-style-type: none;
       li {
@@ -16,13 +16,9 @@
     }
   }
   .service {
-    width: 35%;
-    position: relative;
+    width: 30%;
     .ulService {
       list-style-type: none;
-      position: absolute;
-
-      inset-inline-end: 50px;
       li {
         line-height: 35px;
         margin-left: 5px;
@@ -37,11 +33,11 @@
     }
   }
   .info {
-    width: 30%;
-    position: relative;
+    width: 20%;
+    // padding-left: 8%;
+    margin-left: 10px;
     .ulInfo {
       list-style-type: none;
-      position: absolute;
       inset-inline-end: 30px;
       li {
         line-height: 35px;
@@ -49,4 +45,17 @@
       }
     }
   }
+  @media only screen and (max-width: 1000px) {
+    .introduce,
+    .service,
+    .info {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+.belowFooter {
+  text-align: center;
+  background-color: #e1e1e1;
+  font-family: "Playfair Display", serif;
 }

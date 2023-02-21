@@ -1,5 +1,6 @@
 .maintenance {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 50px;
   font-family: "Playfair Display", serif;
   font-size: 17px;
@@ -9,9 +10,6 @@
     margin-top: 10px;
     text-align: justify;
     padding-right: 20px;
-    ul {
-      list-style-type: none;
-    }
   }
   .image1 {
     width: 55%;
@@ -45,6 +43,99 @@
       transition: box-shadow 0.3s;
       &:hover {
         box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+      }
+    }
+  }
+  @media only screen and (max-width: 1050px) {
+    .text1 {
+      width: 100%;
+    }
+    .text2 {
+      width: 100%;
+      padding-left: 0;
+      order: 1;
+    }
+    .image1 {
+      width: 100%;
+      height: auto;
+    }
+    .image2 {
+      width: 100%;
+      height: auto;
+      order: 2;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .text1 {
+      width: 100%;
+    }
+    .text2 {
+      width: 100%;
+      padding-left: 0;
+      order: 1;
+    }
+    .image1 {
+      width: 100%;
+      height: auto;
+    }
+    .image2 {
+      width: 100%;
+      height: auto;
+      order: 2;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .text1 {
+      width: 100%;
+    }
+    .text2 {
+      width: 100%;
+      padding-left: 0;
+      order: 1;
+    }
+    .image1 {
+      width: 100%;
+      height: auto;
+      .img {
+        height: auto;
+      }
+    }
+    .image2 {
+      width: 100%;
+      height: auto;
+      order: 2;
+      .img {
+        height: auto;
+      }
+    }
+  }
+  @media only screen and (max-width: 250px) {
+    .text1 {
+      width: 100%;
+      font-size: 14px;
+    }
+    .text2 {
+      width: 100%;
+      padding-left: 0;
+      font-size: 14px;
+      order: 1;
+    }
+    .text9 {
+      width: 100%;
+      font-size: 14px;
+    }
+    .image1 {
+      width: 100%;
+      height: auto;
+      .img {
+        height: auto;
+      }
+    }
+    .image2 {
+      width: 100%;
+      order: 2;
+      .img {
+        height: auto;
       }
     }
   }

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const slug = require('mongoose-slug-generator');
 
-const PartnerSchema = mongoose.Schema(
+const PartnerSchema = new mongoose.Schema(
   {
     name: { type: String, require: true },
     origin: { type: String, require: true },

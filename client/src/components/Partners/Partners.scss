@@ -7,9 +7,17 @@
   border-radius: 15px;
   margin-top: 2%;
   margin-bottom: 13.5%;
+  @media only screen and (max-width: 400px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 220px) {
+    font-size: 15px;
+  }
 }
 .partner {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
   font-family: "Playfair Display", serif;
   align-items: center;
@@ -26,6 +34,64 @@
       width: 40%;
       height: 8.5vh;
     }
+    @media only screen and (max-width: 1200px) {
+      .img {
+        margin-left: 130px;
+      }
+    }
+    @media only screen and (max-width: 1070px) {
+      .img {
+        margin-left: 115px;
+      }
+    }
+    @media only screen and (max-width: 960px) {
+      .img {
+        margin-left: 100px;
+      }
+    }
+    @media only screen and (max-width: 850px) {
+      .img {
+        margin-left: 90px;
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+      .img {
+        width: 100%;
+        margin-left: 0;
+        height: 8vh;
+      }
+    }
+    @media only screen and (max-width: 550px) {
+      .namePartner {
+        font-size: 20px;
+      }
+      .img {
+        width: 100%;
+        margin-left: 0;
+        height: 8vh;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .namePartner {
+        font-size: 13px;
+      }
+      .img {
+        width: 100%;
+        margin-left: 0;
+        height: 8vh;
+      }
+    }
+    @media only screen and (max-width: 310px) {
+      .namePartner {
+        font-size: 15px;
+      }
+      .img {
+        width: 100%;
+        margin-left: 0;
+        height: 5vh;
+      }
+    }
   }
   .partner_info {
     text-align: justify;
@@ -38,6 +104,25 @@
       &:hover {
         color: red;
       }
+    }
+    @media only screen and (max-width: 800px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 17px;
+    }
+    @media only screen and (max-width: 320px) {
+      .learn-more {
+        font-size: 15px;
+      }
+    }
+    @media only screen and (max-width: 290px) {
+      .learn-more {
+        font-size: 12px;
+      }
+    }
+    @media only screen and (max-width: 220px) {
+      font-size: 15px;
     }
   }
 }

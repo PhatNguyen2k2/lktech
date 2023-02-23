@@ -35,6 +35,7 @@ const Service = (props) => {
               <img
                 className="img"
                 src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676344689/mayhan_twbmqx.jpg"
+                alt="maintenance1"
               />
             </div>
           </div>
@@ -48,6 +49,7 @@ const Service = (props) => {
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676344789/gia-cong-han_wc0eb4.jpg"
+                  alt="maintenance2"
                 />
               </div>
               <div className="text2">
@@ -112,6 +114,7 @@ const Service = (props) => {
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676304658/gia-cong-han-cat-4_d2jlcd.jpg"
+                  alt="maintenance3"
                 />
               </div>
             </div>
@@ -148,6 +151,7 @@ const Service = (props) => {
               <img
                 className="img"
                 src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676305760/gia-cong-han-cat_duemei.jpg"
+                alt="machining1"
               />
             </div>
           </div>
@@ -161,6 +165,7 @@ const Service = (props) => {
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676344789/gia-cong-han_wc0eb4.jpg"
+                  alt="machining2"
                 />
               </div>
               <div className="text2">
@@ -225,6 +230,7 @@ const Service = (props) => {
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676343502/gia-cong-han-cat-3_v4chal.jpg"
+                  alt="machining3"
                 />
               </div>
             </div>
@@ -276,6 +282,7 @@ const Service = (props) => {
               <img
                 className="img"
                 src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676343536/he-thong-khi-3_qmbos5.png"
+                alt="advice1"
               />
             </div>
           </div>
@@ -289,6 +296,7 @@ const Service = (props) => {
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676343561/he-thong-khi_vdaue7.jpg"
+                  alt="advice2"
                 />
               </div>
               <div className="text2">
@@ -373,6 +381,7 @@ const Service = (props) => {
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676343589/lap-dat-he-thong-khi-nen_ajwwax.jpg"
+                  alt="advice3"
                 />
               </div>
             </div>
@@ -387,6 +396,7 @@ const Service = (props) => {
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676343614/he-thong-khi-1_xqwhdu.jpg"
+                  alt="advice4"
                 />
               </div>
               <div className="text2">

@@ -1,39 +1,46 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
 .logoBranch {
-  max-width: 7%;
+  max-width: 4%;
   height: auto;
   .logo {
     width: 100%;
     display: block;
   }
+  @media only screen and (max-width: 970px) {
+    width: 100%;
+  }
 }
 .textMenu {
-  padding: 0px 90px;
   .textOne {
     font-family: "Playfair Display", serif;
     font-size: 20px;
     font-weight: 700;
     margin-left: 25px;
+
     .image {
-      width: 22%;
       background-color: #fafafa;
-    }
-    .img {
-      width: 20%;
-      height: 4vh;
     }
   }
 }
-.search {
-  width: 35%;
-  margin-top: 5px;
+.searchBar {
   position: relative;
-  .searchBar {
-    width: 100%;
-  }
-  .image {
+  .search-item {
     position: absolute;
-    width: 6%;
-    right: 20px;
-    top: 6px;
+    overflow-y: auto;
+    top: 100%;
+    width: 100%;
+    background-color: #fafafa;
+    li {
+      list-style-type: none;
+      padding: 10px 0 10px 15px;
+      cursor: pointer;
+      &:hover {
+        color: aqua;
+      }
+    }
   }
 }

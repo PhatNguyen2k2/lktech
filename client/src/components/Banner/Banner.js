@@ -46,6 +46,7 @@ const Banner = () => {
             <img
               className="imageLaser"
               src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676049422/image-removebg-preview_rjjnbc.png"
+              alt="Laser"
             />
 
             <div className="bannerDescription">
@@ -68,6 +69,7 @@ const Banner = () => {
             <img
               className="imageKhi"
               src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676086379/Kh%C3%AD_vzoz4f.png"
+              alt="khi"
             />
             <div className="bannerDescriptionKhi">
               <AnimationOnScroll
@@ -89,6 +91,7 @@ const Banner = () => {
             <img
               className="imageChemical"
               src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022018/hoachat-removebg-preview_v2mbdk.png"
+              alt="Chemical"
             />
             <div className="bannerDescription">
               <AnimationOnScroll

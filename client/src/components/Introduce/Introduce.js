@@ -11,6 +11,7 @@ const Introduce = () => {
           <img
             className="image"
             src="https://lktech.com.vn/wp-content/uploads/2020/04/lktech-banner.jpg"
+            alt="Introduce"
           />
         </div>
         <div className="introText">

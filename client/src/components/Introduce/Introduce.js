@@ -10,7 +10,7 @@ const Introduce = () => {
         <div className="introImg">
           <img
             className="image"
-            src="https://lktech.com.vn/wp-content/uploads/2020/04/lktech-banner.jpg"
+            src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1677346085/Product%20img/intro_qdgzsf.jpg"
             alt="Introduce"
           />
         </div>

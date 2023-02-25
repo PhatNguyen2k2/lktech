@@ -13,7 +13,7 @@ const Header = () => {
         <Navbar.Brand className="logoBranch" href="/">
           <img
             className="logo"
-            src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022120/logo_zxf49n.png"
+            src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022120/ICON/logo_zxf49n.png"
             alt="logo"
           />
         </Navbar.Brand>
@@ -33,7 +33,7 @@ const Header = () => {
               <Nav.Link href="/" className="textOne">
                 <img
                   className="image"
-                  src="https://cdn.discordapp.com/attachments/906188184357048332/1075058701704118282/icons8-home-page.gif"
+                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1677207311/ICON/icons8-home-page_wdrltd.gif"
                   alt="home"
                 />{" "}
                 Trang chủ
@@ -41,7 +41,7 @@ const Header = () => {
               <Nav.Link href="/" className="textOne">
                 <img
                   className="img"
-                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676999030/icons8-robot_zdy1uf.gif"
+                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676999030/ICON/icons8-robot_zdy1uf.gif"
                   alt="products"
                 />{" "}
                 Sản phẩm
@@ -49,7 +49,7 @@ const Header = () => {
               <Nav.Link href="/partners" className="textOne">
                 <img
                   className="image"
-                  src="https://cdn.discordapp.com/attachments/906188184357048332/1075061597929734235/icons8-handshake.gif"
+                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1677207337/ICON/icons8-handshake_vgc0wc.gif"
                   alt="partner"
                 />{" "}
                 Đối tác
@@ -57,7 +57,7 @@ const Header = () => {
               <Nav.Link href="/" className="textOne">
                 <img
                   className="img"
-                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676999368/ezgif.com-resize_j5wedw.gif"
+                  src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676999368/ICON/ezgif.com-resize_j5wedw.gif"
                   alt="news"
                 />{" "}
                 Tin tức

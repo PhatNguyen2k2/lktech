@@ -38,14 +38,14 @@ const Banner = () => {
           muted
           loop
           className="video"
-          src="https://res.cloudinary.com/dwpjjpgrz/video/upload/v1676654109/banh-rang-56376_cwwcnf.mp4"
+          src="https://res.cloudinary.com/dwpjjpgrz/video/upload/v1676654109/Panel%20intro%20video/banh-rang-56376_cwwcnf.mp4"
           type="video/mp4"
         />
         {btnChange === 1 && (
           <div className="bannerTrans">
             <img
               className="imageLaser"
-              src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676049422/image-removebg-preview_rjjnbc.png"
+              src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676049422/Product%20img/image-removebg-preview_rjjnbc.png"
               alt="Laser"
             />
 
@@ -68,7 +68,7 @@ const Banner = () => {
           <div className="bannerTrans">
             <img
               className="imageKhi"
-              src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676086379/Kh%C3%AD_vzoz4f.png"
+              src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676086379/Product%20img/Kh%C3%AD_vzoz4f.png"
               alt="khi"
             />
             <div className="bannerDescriptionKhi">
@@ -90,7 +90,7 @@ const Banner = () => {
           <div className="bannerTrans">
             <img
               className="imageChemical"
-              src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022018/hoachat-removebg-preview_v2mbdk.png"
+              src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022018/Product%20img/hoachat-removebg-preview_v2mbdk.png"
               alt="Chemical"
             />
             <div className="bannerDescription">

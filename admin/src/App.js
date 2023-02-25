@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Loading from "./components/Loading/Loading";
+
+const ViewHome = React.lazy(() => import("./pages/ViewHome"));
+const ViewPartner = React.lazy(() => import("./pages/Partner/ViewPartner"));
+const ViewAddPartner = React.lazy(() =>
+  import("./pages/Partner/ViewAddPartner")
+);
+const ViewEditPartner = React.lazy(() =>
+  import("./pages/Partner/ViewEditPartner")
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<ViewHome />} />
+          <Route path="/partner" element={<ViewPartner />} />
+          <Route path="/partner/add" element={<ViewAddPartner />} />
+          <Route path="/partner/:slug" element={<ViewEditPartner />} />
+          <Route path="/loading" element={<Loading />} />
+        </Routes>
+      </Suspense>
+    </>
   );
 }
 

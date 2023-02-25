@@ -1,0 +1,21 @@
+.add-partner-body {
+  background-color: #dedede;
+  font-family: "Playfair Display", serif;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(90, 90, 90);
+  .name {
+    font-weight: bold;
+    font-size: larger;
+  }
+  .partner-logo {
+    margin-bottom: 1%;
+    width: 20%;
+    .logo-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .save {
+    margin-bottom: 10px;
+  }
+}

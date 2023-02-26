@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lktech/static/css/main.46901ad5.css",
-    "main.js": "/lktech/static/js/main.9b5e1b69.js",
+    "main.js": "/lktech/static/js/main.6a71c5be.js",
     "static/css/598.57a63fac.chunk.css": "/lktech/static/css/598.57a63fac.chunk.css",
     "static/js/598.392b7846.chunk.js": "/lktech/static/js/598.392b7846.chunk.js",
     "static/css/342.cfb7edef.chunk.css": "/lktech/static/css/342.cfb7edef.chunk.css",
@@ -18,7 +18,7 @@
     "static/js/224.b50340d5.chunk.js": "/lktech/static/js/224.b50340d5.chunk.js",
     "index.html": "/lktech/index.html",
     "main.46901ad5.css.map": "/lktech/static/css/main.46901ad5.css.map",
-    "main.9b5e1b69.js.map": "/lktech/static/js/main.9b5e1b69.js.map",
+    "main.6a71c5be.js.map": "/lktech/static/js/main.6a71c5be.js.map",
     "598.57a63fac.chunk.css.map": "/lktech/static/css/598.57a63fac.chunk.css.map",
     "598.392b7846.chunk.js.map": "/lktech/static/js/598.392b7846.chunk.js.map",
     "342.cfb7edef.chunk.css.map": "/lktech/static/css/342.cfb7edef.chunk.css.map",
@@ -36,6 +36,6 @@
   },
   "entrypoints": [
     "static/css/main.46901ad5.css",
-    "static/js/main.9b5e1b69.js"
+    "static/js/main.6a71c5be.js"
   ]
 }

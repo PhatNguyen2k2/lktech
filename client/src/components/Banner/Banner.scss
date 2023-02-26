@@ -8,6 +8,14 @@
     height: 50vh;
     object-fit: cover;
   }
+  @media only screen and (max-width: 1024px) {
+    height: 40vh;
+    .video {
+      width: 100%;
+      height: 40vh;
+    }
+  }
+
   .bannerTrans {
     .imageLaser {
       position: absolute;
@@ -58,8 +66,12 @@
       }
     }
     @media only screen and (max-width: 850px) {
-      .imageChemical,
-      .imageLaser,
+      .imageChemical {
+        width: 35%;
+      }
+      .imageLaser {
+        width: 45%;
+      }
       .imageKhi {
         width: 50%;
         right: 0;
@@ -75,10 +87,10 @@
     }
     @media only screen and (max-width: 650px) {
       .imageChemical {
-        width: 60%;
+        width: 50%;
       }
       .imageLaser {
-        width: 80%;
+        width: 60%;
         right: 5%;
       }
       .bannerDescription,
@@ -92,14 +104,14 @@
     }
     @media only screen and (max-width: 400px) {
       .imageChemical {
-        width: 80%;
+        width: 60%;
       }
       .imageLaser {
-        width: 100%;
+        width: 80%;
       }
       .imageKhi {
-        width: 100%;
-        left: 0;
+        width: 90%;
+        left: 5%;
       }
     }
     #btnOne {

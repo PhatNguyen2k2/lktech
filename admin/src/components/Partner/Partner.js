@@ -41,7 +41,7 @@ const Partner = () => {
             <th>#</th>
             <th>Logo</th>
             <th>Name</th>
-            <th>Create At</th>
+            <th colSpan={2}>Create At</th>
           </tr>
         </thead>
         <tbody>

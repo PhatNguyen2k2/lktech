@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
+import PageNotFound from "../NotFound/PageNotFound";
 import "./EditPartner.scss";
 const EditPartner = (props) => {
   const date = new Date();
@@ -76,6 +77,7 @@ const EditPartner = (props) => {
     if (props.type === "edit") {
       const res = await axios.get("http://localhost:8000/partners/" + slug);
       setPartner(res.data.partner);
+      setLogo(res.data.partner.logo);
     }
   }
   const handleBlur = (e) => {
@@ -112,8 +114,10 @@ const EditPartner = (props) => {
     handleLogo();
     getPartners();
   }, [logo, props.data]);
+  console.log(partner);
   return (
     <Container className="add-partner-body" fluid="xxl">
+      {partner === null && <PageNotFound />}
       {Object.keys(partner).length > 0 ? (
         <Form noValidate validated={validated} onSubmit={handleSubmitEdit}>
           <Form.Group className="mb-3" controlId="formBasicText">
@@ -226,7 +230,7 @@ const EditPartner = (props) => {
           )}
           {checkSuccess &&
             (noti === 200 ? (
-              <Alert key={"success"} variant={"success "}>
+              <Alert key={"success"} variant={"success"}>
                 Sửa thành công
               </Alert>
             ) : (

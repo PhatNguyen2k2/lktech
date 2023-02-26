@@ -4,10 +4,47 @@
   z-index: 4;
 }
 .logoBranch {
-  max-width: 4%;
+  max-width: 5%;
   height: auto;
   .logo {
     width: 100%;
     display: block;
+  }
+  @media only screen and (max-width: 1200px) {
+    .logo {
+      width: 9vw;
+      height: 8vh;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .logo {
+      width: 9vw;
+      height: 7vh;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .logo {
+      width: 10vw;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .logo {
+      width: 10vw;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .logo {
+      width: 11vw;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .logo {
+      width: 13vw;
+    }
+  }
+  @media only screen and (max-width: 300px) {
+    .logo {
+      width: 17vw;
+    }
   }
 }

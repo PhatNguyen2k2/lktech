@@ -4,6 +4,7 @@ import "./App.css";
 import "animate.css/animate.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Loading from "./components/Loading/Loading";
+import PageNotFound from "./components/NotFound/PageNotFound";
 
 const ViewHome = React.lazy(() => import("./pages/ViewHome"));
 const ViewMaintenance = React.lazy(() =>
@@ -26,6 +27,7 @@ function App() {
           <Route path="/advice" element={<ViewAdvice />} />
           <Route path="/partners" element={<ViewPartners />} />
           <Route path="/loading" element={<Loading />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
     </>

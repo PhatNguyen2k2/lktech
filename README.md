@@ -1,2 +1,2 @@
 # lktech
-a website
+a web app

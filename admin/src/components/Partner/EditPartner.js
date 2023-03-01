@@ -116,265 +116,270 @@ const EditPartner = (props) => {
   }, [logo, props.data]);
   console.log(partner);
   return (
-    <Container className="add-partner-body" fluid="xxl">
-      {partner === null && <PageNotFound />}
-      {Object.keys(partner).length > 0 ? (
-        <Form noValidate validated={validated} onSubmit={handleSubmitEdit}>
-          <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label className="name" style={{ marginTop: "1%" }}>
-              Tên
-            </Form.Label>
-            <Form.Control
-              required
-              autoComplete="true"
-              type="text"
-              name="name"
-              placeholder="L&K Tech"
-              defaultValue={partner.name || ""}
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền tên!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label className="name">Xuất xứ</Form.Label>
-            <Form.Control
-              required
-              autoComplete="true"
-              type="text"
-              name="origin"
-              placeholder="Việt Nam"
-              defaultValue={partner.origin || ""}
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền xuất xứ!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicTextArea">
-            <Form.Label className="name">Năm thành lập</Form.Label>
-            <Form.Control
-              required
-              type="number"
-              name="founding"
-              onBlur={handleBlur}
-              placeholder="2000"
-              defaultValue={partner.founding || ""}
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền năm!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicTextArea">
-            <Form.Label className="name">Lĩnh vực</Form.Label>
-            <Form.Control
-              required
-              as="textarea"
-              rows={4}
-              name="field"
-              placeholder="Sản xuất và kinh doanh sản phẩm hoá chất"
-              defaultValue={partner.field || ""}
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền lĩnh vực!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicTextArea">
-            <Form.Label className="name">Ứng dụng</Form.Label>
-            <Form.Control
-              required
-              as="textarea"
-              rows={4}
-              name="application"
-              placeholder="Sản xuất ô tô, Điện tử, Nội thất"
-              defaultValue={partner.application.join(", ") || ""}
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền ứng dụng!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label className="name">Link</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              name="link"
-              placeholder="https://lktech.com.vn"
-              defaultValue={partner.link || ""}
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền link công ty!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group controlId="formFile" className="mb-3">
-            <Form.Label className="name">Logo công ty</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              name="logo"
-              placeholder="https://lktech.com.vn/wp-content/uploads/2020/04/logo.png"
-              defaultValue={partner.logo || ""}
-              onChange={handleLogo}
-              onBlur={handleBlur}
-            />
-            <Form.Text className="text-muted">
-              Link có đuôi .jpg hoặc .png
-            </Form.Text>
-            <Form.Control.Feedback type="invalid">
-              Hãy thêm link logo!
-            </Form.Control.Feedback>
-          </Form.Group>
-          {logo.length > 0 && (
-            <div className="partner-logo">
-              <img className="logo-image" src={logo} alt={logo} />
-            </div>
-          )}
-          {checkSuccess &&
-            (noti === 200 ? (
-              <Alert key={"success"} variant={"success"}>
-                Sửa thành công
-              </Alert>
-            ) : (
-              <Alert key={"danger"} variant={"danger"}>
-                Sửa thất bại
-              </Alert>
-            ))}
-          <Button className="save" variant="primary" type="submit">
-            Lưu
-          </Button>
-        </Form>
+    <>
+      {partner === null ? (
+        <PageNotFound />
       ) : (
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label className="name" style={{ marginTop: "1%" }}>
-              Tên
-            </Form.Label>
-            <Form.Control
-              required
-              type="text"
-              name="name"
-              placeholder="L&K Tech"
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền tên!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label className="name">Xuất xứ</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              name="origin"
-              placeholder="Việt Nam"
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền xuất xứ!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicTextArea">
-            <Form.Label className="name">Năm thành lập</Form.Label>
-            <Form.Control
-              required
-              type="number"
-              name="founding"
-              onBlur={handleBlur}
-              placeholder="2000"
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền năm!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicTextArea">
-            <Form.Label className="name">Lĩnh vực</Form.Label>
-            <Form.Control
-              required
-              as="textarea"
-              rows={4}
-              name="field"
-              placeholder="Sản xuất và kinh doanh sản phẩm hoá chất"
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền lĩnh vực!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicTextArea">
-            <Form.Label className="name">Ứng dụng</Form.Label>
-            <Form.Control
-              required
-              as="textarea"
-              rows={4}
-              name="application"
-              placeholder="Sản xuất ô tô, Điện tử, Nội thất"
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền ứng dụng!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label className="name">Link</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              name="link"
-              placeholder="https://lktech.com.vn"
-            />
-            <Form.Control.Feedback type="invalid">
-              Hãy điền link công ty!
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group controlId="formFile" className="mb-3">
-            <Form.Label className="name">Logo công ty</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              name="logo"
-              placeholder="https://lktech.com.vn/wp-content/uploads/2020/04/logo.png"
-              onChange={handleLogo}
-              onBlur={handleBlur}
-            />
-            <Form.Text className="text-muted">
-              Link có đuôi .jpg hoặc .png
-            </Form.Text>
-            <Form.Control.Feedback type="invalid">
-              Hãy thêm link logo!
-            </Form.Control.Feedback>
-          </Form.Group>
-          {logo.length > 0 && (
-            <div className="partner-logo">
-              <img className="logo-image" src={logo} alt={logo} />
-            </div>
+        <Container className="add-partner-body" fluid="xxl">
+          {Object.keys(partner).length > 0 ? (
+            <Form noValidate validated={validated} onSubmit={handleSubmitEdit}>
+              <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Label className="name" style={{ marginTop: "1%" }}>
+                  Tên
+                </Form.Label>
+                <Form.Control
+                  required
+                  autoComplete="true"
+                  type="text"
+                  name="name"
+                  placeholder="L&K Tech"
+                  defaultValue={partner.name || ""}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền tên!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Label className="name">Xuất xứ</Form.Label>
+                <Form.Control
+                  required
+                  autoComplete="true"
+                  type="text"
+                  name="origin"
+                  placeholder="Việt Nam"
+                  defaultValue={partner.origin || ""}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền xuất xứ!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicTextArea">
+                <Form.Label className="name">Năm thành lập</Form.Label>
+                <Form.Control
+                  required
+                  type="number"
+                  name="founding"
+                  onBlur={handleBlur}
+                  placeholder="2000"
+                  defaultValue={partner.founding || ""}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền năm!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicTextArea">
+                <Form.Label className="name">Lĩnh vực</Form.Label>
+                <Form.Control
+                  required
+                  as="textarea"
+                  rows={4}
+                  name="field"
+                  placeholder="Sản xuất và kinh doanh sản phẩm hoá chất"
+                  defaultValue={partner.field || ""}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền lĩnh vực!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicTextArea">
+                <Form.Label className="name">Ứng dụng</Form.Label>
+                <Form.Control
+                  required
+                  as="textarea"
+                  rows={4}
+                  name="application"
+                  placeholder="Sản xuất ô tô, Điện tử, Nội thất"
+                  defaultValue={partner.application.join(", ") || ""}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền ứng dụng!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Label className="name">Link</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="link"
+                  placeholder="https://lktech.com.vn"
+                  defaultValue={partner.link || ""}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền link công ty!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group controlId="formFile" className="mb-3">
+                <Form.Label className="name">Logo công ty</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="logo"
+                  placeholder="https://lktech.com.vn/wp-content/uploads/2020/04/logo.png"
+                  defaultValue={partner.logo || ""}
+                  onChange={handleLogo}
+                  onBlur={handleBlur}
+                />
+                <Form.Text className="text-muted">
+                  Link có đuôi .jpg hoặc .png
+                </Form.Text>
+                <Form.Control.Feedback type="invalid">
+                  Hãy thêm link logo!
+                </Form.Control.Feedback>
+              </Form.Group>
+              {logo.length > 0 && (
+                <div className="partner-logo">
+                  <img className="logo-image" src={logo} alt={logo} />
+                </div>
+              )}
+              {checkSuccess &&
+                (noti === 200 ? (
+                  <Alert key={"success"} variant={"success"}>
+                    Sửa thành công
+                  </Alert>
+                ) : (
+                  <Alert key={"danger"} variant={"danger"}>
+                    Sửa thất bại
+                  </Alert>
+                ))}
+              <Button className="save" variant="primary" type="submit">
+                Lưu
+              </Button>
+            </Form>
+          ) : (
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Label className="name" style={{ marginTop: "1%" }}>
+                  Tên
+                </Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="name"
+                  placeholder="L&K Tech"
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền tên!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Label className="name">Xuất xứ</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="origin"
+                  placeholder="Việt Nam"
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền xuất xứ!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicTextArea">
+                <Form.Label className="name">Năm thành lập</Form.Label>
+                <Form.Control
+                  required
+                  type="number"
+                  name="founding"
+                  onBlur={handleBlur}
+                  placeholder="2000"
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền năm!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicTextArea">
+                <Form.Label className="name">Lĩnh vực</Form.Label>
+                <Form.Control
+                  required
+                  as="textarea"
+                  rows={4}
+                  name="field"
+                  placeholder="Sản xuất và kinh doanh sản phẩm hoá chất"
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền lĩnh vực!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicTextArea">
+                <Form.Label className="name">Ứng dụng</Form.Label>
+                <Form.Control
+                  required
+                  as="textarea"
+                  rows={4}
+                  name="application"
+                  placeholder="Sản xuất ô tô, Điện tử, Nội thất"
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền ứng dụng!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Label className="name">Link</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="link"
+                  placeholder="https://lktech.com.vn"
+                />
+                <Form.Control.Feedback type="invalid">
+                  Hãy điền link công ty!
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group controlId="formFile" className="mb-3">
+                <Form.Label className="name">Logo công ty</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="logo"
+                  placeholder="https://lktech.com.vn/wp-content/uploads/2020/04/logo.png"
+                  onChange={handleLogo}
+                  onBlur={handleBlur}
+                />
+                <Form.Text className="text-muted">
+                  Link có đuôi .jpg hoặc .png
+                </Form.Text>
+                <Form.Control.Feedback type="invalid">
+                  Hãy thêm link logo!
+                </Form.Control.Feedback>
+              </Form.Group>
+              {logo.length > 0 && (
+                <div className="partner-logo">
+                  <img className="logo-image" src={logo} alt={logo} />
+                </div>
+              )}
+              {checkSuccess &&
+                (noti === 201 ? (
+                  <Alert key={"success"} variant={"success "}>
+                    Thêm thành công
+                  </Alert>
+                ) : (
+                  <Alert key={"danger"} variant={"danger"}>
+                    Thêm thất bại
+                  </Alert>
+                ))}
+              <Button className="save" variant="primary" type="submit">
+                Lưu
+              </Button>
+            </Form>
           )}
-          {checkSuccess &&
-            (noti === 201 ? (
-              <Alert key={"success"} variant={"success "}>
-                Thêm thành công
-              </Alert>
-            ) : (
-              <Alert key={"danger"} variant={"danger"}>
-                Thêm thất bại
-              </Alert>
-            ))}
-          <Button className="save" variant="primary" type="submit">
-            Lưu
-          </Button>
-        </Form>
+          <Modal
+            show={show}
+            onHide={handleClose}
+            backdrop="static"
+            keyboard={false}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>Check again!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>{alert}</Modal.Body>
+            <Modal.Footer>
+              <Button variant="primary" onClick={handleClose}>
+                OK
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </Container>
       )}
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Check again!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{alert}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            OK
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </Container>
+    </>
   );
 };
 export default EditPartner;

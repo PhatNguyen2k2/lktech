@@ -41,6 +41,16 @@
             border-radius: 8px;
             border: 0.5px solid rgb(101, 96, 96);
           }
+          .news-image {
+            margin-top: 1%;
+            img {
+              display: block;
+              width: 35%;
+              height: 35vh;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
         }
       }
       #opening {
@@ -167,6 +177,37 @@
             }
           }
         }
+        #img {
+          border-radius: 10px;
+          margin-top: 2%;
+          background-color: #876f8c;
+          padding: 0px 10px;
+          label {
+            width: 100%;
+            font-weight: bold;
+            font-size: 18px;
+            input {
+              margin-bottom: 7px;
+              margin-top: 3px;
+              width: 100%;
+              height: 5vh;
+              border-radius: 8px;
+              border: 0.5px solid rgb(101, 96, 96);
+            }
+          }
+          button {
+            margin-top: 7px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            border-radius: 10px;
+            width: 7%;
+            height: 5vh;
+            border: 0.5px solid rgb(101, 96, 96);
+            &:hover {
+              background-color: #ffe6d2;
+            }
+          }
+        }
       }
     }
     .btnSubmit {
@@ -187,4 +228,165 @@
 hr {
   width: 80%;
   margin-left: 25%;
+}
+.notifi {
+  margin-left: 24%;
+  width: 81%;
+}
+@media (max-width: 1300px) {
+  .news {
+    form {
+      border: 1px solid red;
+      width: 80%;
+    }
+  }
+  hr {
+    width: 70%;
+  }
+}
+@media (max-width: 950px) {
+  .news {
+    .control-box {
+      .btnCtrl {
+        font-size: 14px;
+      }
+    }
+    form {
+      border: 1px solid red;
+      width: 80%;
+      .btnSubmit {
+        font-size: 15px;
+        width: 6%;
+        height: 4vh;
+      }
+      .content {
+        .hard-content {
+          label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 70%;
+  }
+}
+@media (max-width: 850px) {
+  .news {
+    .control-box {
+      .btnCtrl {
+        font-size: 14px;
+      }
+    }
+    form {
+      border: 1px solid red;
+      width: 80%;
+      .btnSubmit {
+        font-size: 13px;
+        width: 6%;
+        height: 3vh;
+      }
+      .content {
+        .hard-content {
+          label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 70%;
+  }
+}
+@media (max-width: 750px) {
+  .news {
+    .control-box {
+      .btnCtrl {
+        font-size: 14px;
+      }
+    }
+    form {
+      border: 1px solid red;
+      width: 80%;
+
+      .btnSubmit {
+        font-size: 12px;
+        width: 10%;
+        height: 5vh;
+      }
+      .content {
+        margin-bottom: 50px;
+        .hard-content {
+          label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .news {
+    .control-box {
+      .btnCtrl {
+        font-size: 8px;
+      }
+    }
+    form {
+      border: 1px solid red;
+      width: 80%;
+
+      .btnSubmit {
+        font-size: 10px;
+        width: 10%;
+        height: 4vh;
+      }
+      .content {
+        margin-bottom: 40px;
+        .hard-content {
+          label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 70%;
+  }
+}
+@media (max-width: 410px) {
+  .news {
+    .control-box {
+      .btnCtrl {
+        font-size: 6px;
+      }
+    }
+    form {
+      border: 1px solid red;
+      width: 80%;
+
+      .btnSubmit {
+        font-size: 7px;
+        width: 10%;
+        height: 2vh;
+      }
+      .content {
+        margin-bottom: 20px;
+        .hard-content {
+          label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 70%;
+  }
 }

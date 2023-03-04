@@ -114,7 +114,6 @@ const EditPartner = (props) => {
     handleLogo();
     getPartners();
   }, [logo, props.data]);
-  console.log(partner);
   return (
     <>
       {partner === null ? (
@@ -125,7 +124,7 @@ const EditPartner = (props) => {
             <Form noValidate validated={validated} onSubmit={handleSubmitEdit}>
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label className="name" style={{ marginTop: "1%" }}>
-                  Tên
+                  Name
                 </Form.Label>
                 <Form.Control
                   required
@@ -136,11 +135,11 @@ const EditPartner = (props) => {
                   defaultValue={partner.name || ""}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền tên!
+                  Fill name!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label className="name">Xuất xứ</Form.Label>
+                <Form.Label className="name">Origin</Form.Label>
                 <Form.Control
                   required
                   autoComplete="true"
@@ -150,11 +149,11 @@ const EditPartner = (props) => {
                   defaultValue={partner.origin || ""}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền xuất xứ!
+                  Fill origin!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicTextArea">
-                <Form.Label className="name">Năm thành lập</Form.Label>
+                <Form.Label className="name">Year</Form.Label>
                 <Form.Control
                   required
                   type="number"
@@ -164,11 +163,11 @@ const EditPartner = (props) => {
                   defaultValue={partner.founding || ""}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền năm!
+                  Fill year!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicTextArea">
-                <Form.Label className="name">Lĩnh vực</Form.Label>
+                <Form.Label className="name">Field</Form.Label>
                 <Form.Control
                   required
                   as="textarea"
@@ -178,11 +177,11 @@ const EditPartner = (props) => {
                   defaultValue={partner.field || ""}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền lĩnh vực!
+                  Fill field!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicTextArea">
-                <Form.Label className="name">Ứng dụng</Form.Label>
+                <Form.Label className="name">Application</Form.Label>
                 <Form.Control
                   required
                   as="textarea"
@@ -192,7 +191,7 @@ const EditPartner = (props) => {
                   defaultValue={partner.application.join(", ") || ""}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền ứng dụng!
+                  Fill application!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicText">
@@ -205,11 +204,11 @@ const EditPartner = (props) => {
                   defaultValue={partner.link || ""}
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền link công ty!
+                  Fill link company!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label className="name">Logo công ty</Form.Label>
+                <Form.Label className="name">Logo company</Form.Label>
                 <Form.Control
                   required
                   type="text"
@@ -220,10 +219,10 @@ const EditPartner = (props) => {
                   onBlur={handleBlur}
                 />
                 <Form.Text className="text-muted">
-                  Link có đuôi .jpg hoặc .png
+                  Link has tag .jpg or .png
                 </Form.Text>
                 <Form.Control.Feedback type="invalid">
-                  Hãy thêm link logo!
+                  Fill link logo!
                 </Form.Control.Feedback>
               </Form.Group>
               {logo.length > 0 && (
@@ -234,11 +233,11 @@ const EditPartner = (props) => {
               {checkSuccess &&
                 (noti === 200 ? (
                   <Alert key={"success"} variant={"success"}>
-                    Sửa thành công
+                    Updated success
                   </Alert>
                 ) : (
                   <Alert key={"danger"} variant={"danger"}>
-                    Sửa thất bại
+                    Updated fail
                   </Alert>
                 ))}
               <Button className="save" variant="primary" type="submit">
@@ -249,7 +248,7 @@ const EditPartner = (props) => {
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label className="name" style={{ marginTop: "1%" }}>
-                  Tên
+                  Name
                 </Form.Label>
                 <Form.Control
                   required
@@ -258,11 +257,11 @@ const EditPartner = (props) => {
                   placeholder="L&K Tech"
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền tên!
+                  Fill name!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label className="name">Xuất xứ</Form.Label>
+                <Form.Label className="name">Origin</Form.Label>
                 <Form.Control
                   required
                   type="text"
@@ -270,11 +269,11 @@ const EditPartner = (props) => {
                   placeholder="Việt Nam"
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền xuất xứ!
+                  Fill origin!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicTextArea">
-                <Form.Label className="name">Năm thành lập</Form.Label>
+                <Form.Label className="name">Year</Form.Label>
                 <Form.Control
                   required
                   type="number"
@@ -283,11 +282,11 @@ const EditPartner = (props) => {
                   placeholder="2000"
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền năm!
+                  Fill year!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicTextArea">
-                <Form.Label className="name">Lĩnh vực</Form.Label>
+                <Form.Label className="name">Field</Form.Label>
                 <Form.Control
                   required
                   as="textarea"
@@ -296,11 +295,11 @@ const EditPartner = (props) => {
                   placeholder="Sản xuất và kinh doanh sản phẩm hoá chất"
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền lĩnh vực!
+                  Fill field!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicTextArea">
-                <Form.Label className="name">Ứng dụng</Form.Label>
+                <Form.Label className="name">Application</Form.Label>
                 <Form.Control
                   required
                   as="textarea"
@@ -309,7 +308,7 @@ const EditPartner = (props) => {
                   placeholder="Sản xuất ô tô, Điện tử, Nội thất"
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền ứng dụng!
+                  Fill application!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicText">
@@ -321,11 +320,11 @@ const EditPartner = (props) => {
                   placeholder="https://lktech.com.vn"
                 />
                 <Form.Control.Feedback type="invalid">
-                  Hãy điền link công ty!
+                  Fill link company!
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label className="name">Logo công ty</Form.Label>
+                <Form.Label className="name">Logo company</Form.Label>
                 <Form.Control
                   required
                   type="text"
@@ -335,10 +334,10 @@ const EditPartner = (props) => {
                   onBlur={handleBlur}
                 />
                 <Form.Text className="text-muted">
-                  Link có đuôi .jpg hoặc .png
+                  Link has tag .jpg or .png
                 </Form.Text>
                 <Form.Control.Feedback type="invalid">
-                  Hãy thêm link logo!
+                  Fill link logo!
                 </Form.Control.Feedback>
               </Form.Group>
               {logo.length > 0 && (
@@ -349,11 +348,11 @@ const EditPartner = (props) => {
               {checkSuccess &&
                 (noti === 201 ? (
                   <Alert key={"success"} variant={"success "}>
-                    Thêm thành công
+                    Added success
                   </Alert>
                 ) : (
                   <Alert key={"danger"} variant={"danger"}>
-                    Thêm thất bại
+                    Added fail
                   </Alert>
                 ))}
               <Button className="save" variant="primary" type="submit">

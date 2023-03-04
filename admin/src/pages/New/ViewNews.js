@@ -1,15 +1,14 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import EditPartner from "../../components/Partner/EditPartner";
-const ViewAddPartner = () => {
+import News from "../../components/News/News";
+const ViewAddNews = () => {
   return (
     <>
       <Header />
-      <EditPartner />
-      <hr />
+      <News />
       <Footer />
     </>
   );
 };
-export default ViewAddPartner;
+export default ViewAddNews;

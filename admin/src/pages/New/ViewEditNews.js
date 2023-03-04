@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import EditNews from "../../components/News/EditNews";
-const ViewAddNews = () => {
+const ViewEditNews = () => {
   return (
     <>
       <Header />
-      <EditNews />
+      <EditNews type="edit" />
     </>
   );
 };
-export default ViewAddNews;
+export default ViewEditNews;

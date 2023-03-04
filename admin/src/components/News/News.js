@@ -1,55 +1,60 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
-import "./Partner.scss";
-const Partner = () => {
+import "./News.scss";
+import { useNavigate } from "react-router-dom";
+
+const News = () => {
   const navigate = useNavigate();
-  const [partner, setPartner] = useState([]);
-  const [partnerId, setPartnerId] = useState("");
+  const [news, setNews] = useState([]);
+  const [newsId, setNewsId] = useState("");
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = (e) => {
     setShow(true);
-    setPartnerId(e);
+    setNewsId(e);
   };
-  async function getPartner() {
-    const res = await axios.get("http://localhost:8000/partners");
-    setPartner(res.data.partner);
+  async function getNews() {
+    const res = await axios.get("http://localhost:8000/news");
+    setNews(res.data.news);
   }
-  async function deletePartner() {
-    await axios.delete("http://localhost:8000/partners/" + partnerId);
+  async function deleteNews() {
+    await axios.delete("http://localhost:8000/news/" + newsId);
     handleClose();
     window.location.reload();
   }
-  const editPartner = (e) => {
-    navigate("/partner/" + e);
+  const editNews = (e) => {
+    navigate("/news/" + e);
   };
   useEffect(() => {
-    getPartner();
+    getNews();
   }, []);
   return (
     <Container fluid="xxl">
-      <h1 className="all">My Partners</h1>
+      <h1 className="all">My News</h1>
       <Table striped>
         <thead>
           <tr>
             <th>#</th>
-            <th>Logo</th>
+            <th>Image</th>
             <th>Name</th>
             <th colSpan={2}>Create At</th>
           </tr>
         </thead>
         <tbody>
-          {partner.length > 0 &&
-            partner.map((item, index) => (
-              <tr className="tr-partner" key={index}>
+          {news.length > 0 &&
+            news.map((item, index) => (
+              <tr className="tr-news" key={index}>
                 <td>{index + 1}</td>
                 <td className="td-image">
-                  <img className="logo-image" src={item.logo} alt={item.name} />
+                  <img
+                    className="news-image"
+                    src={item.image}
+                    alt={item.name}
+                  />
                 </td>
                 <td className="td-name">{item.name}</td>
                 <td>{item.createdAt}</td>
@@ -57,7 +62,7 @@ const Partner = () => {
                   <button
                     className="edit-delete"
                     onClick={() => {
-                      editPartner(`${item.slug}`);
+                      editNews(`${item.slug}`);
                     }}
                   >
                     <img
@@ -88,12 +93,12 @@ const Partner = () => {
         <Modal.Header closeButton>
           <Modal.Title>Wait!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to delete this partner ?</Modal.Body>
+        <Modal.Body>Are you sure you want to delete this news ?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="danger" onClick={deletePartner}>
+          <Button variant="danger" onClick={deleteNews}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -101,4 +106,4 @@ const Partner = () => {
     </Container>
   );
 };
-export default Partner;
+export default News;

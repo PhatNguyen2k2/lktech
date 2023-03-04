@@ -38,7 +38,7 @@ class PartnerController {
     Partner.findOneAndUpdate({ slug: req.params.slug }, req.body, {
       new: true
     })
-      .then((partner) => {
+      .then(() => {
         res.status(200).json({ success: true, message: 'successfully' });
       })
       .catch((err) => {

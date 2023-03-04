@@ -7,6 +7,7 @@ const ViewEditPartner = () => {
     <>
       <Header />
       <EditPartner type="edit" />
+      <hr />
       <Footer />
     </>
   );

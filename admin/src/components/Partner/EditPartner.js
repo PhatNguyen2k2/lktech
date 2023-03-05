@@ -34,7 +34,7 @@ const EditPartner = (props) => {
         origin: form.origin.value,
         founding: form.founding.value,
         field: form.field.value,
-        application: form.application.value.split(", "),
+        application: form.application.value,
         link: form.link.value,
         logo: form.logo.value,
       };
@@ -60,7 +60,7 @@ const EditPartner = (props) => {
         origin: form.origin.value,
         founding: form.founding.value,
         field: form.field.value,
-        application: form.application.value.split(", "),
+        application: form.application.value,
         link: form.link.value,
         logo: form.logo.value,
       };
@@ -187,8 +187,8 @@ const EditPartner = (props) => {
                   as="textarea"
                   rows={4}
                   name="application"
-                  placeholder="Sản xuất ô tô, Điện tử, Nội thất"
-                  defaultValue={partner.application.join(", ") || ""}
+                  placeholder="Sản xuất ô tô; Điện tử; Nội thất"
+                  defaultValue={partner.application || ""}
                 />
                 <Form.Control.Feedback type="invalid">
                   Fill application!
@@ -305,7 +305,7 @@ const EditPartner = (props) => {
                   as="textarea"
                   rows={4}
                   name="application"
-                  placeholder="Sản xuất ô tô, Điện tử, Nội thất"
+                  placeholder="Sản xuất ô tô; Điện tử; Nội thất"
                 />
                 <Form.Control.Feedback type="invalid">
                   Fill application!

@@ -112,42 +112,6 @@
         }
       }
       #soft-content {
-        #form-des {
-          border-radius: 10px;
-          margin-top: 2%;
-          background-color: #fafafa;
-          padding: 0px 10px;
-          label {
-            width: 100%;
-            font-weight: bold;
-            font-size: 18px;
-            input {
-              margin-top: 3px;
-              width: 100%;
-              height: 5vh;
-              border-radius: 8px;
-              border: 0.5px solid rgb(101, 96, 96);
-            }
-            textarea {
-              margin-top: 3px;
-              width: 100%;
-              height: 10vh;
-              border-radius: 8px;
-              border: 0.5px solid rgb(101, 96, 96);
-            }
-          }
-          button {
-            margin-bottom: 5px;
-            margin-left: 5px;
-            border-radius: 10px;
-            width: 7%;
-            height: 5vh;
-            border: 0.5px solid rgb(101, 96, 96);
-            &:hover {
-              background-color: #ffe6d2;
-            }
-          }
-        }
         #des {
           border-radius: 10px;
           margin-top: 2%;
@@ -187,7 +151,6 @@
             font-weight: bold;
             font-size: 18px;
             input {
-              margin-bottom: 7px;
               margin-top: 3px;
               width: 100%;
               height: 5vh;
@@ -236,12 +199,14 @@ hr {
 @media (max-width: 1300px) {
   .news {
     form {
-      border: 1px solid red;
       width: 80%;
     }
   }
   hr {
     width: 70%;
+  }
+  .notifi {
+    width: 76%;
   }
 }
 @media (max-width: 950px) {
@@ -252,7 +217,6 @@ hr {
       }
     }
     form {
-      border: 1px solid red;
       width: 80%;
       .btnSubmit {
         font-size: 15px;
@@ -263,6 +227,22 @@ hr {
         .hard-content {
           label {
             font-size: 14px;
+          }
+        }
+        #soft-content {
+          #des,
+          #img {
+            button {
+              font-size: 13px;
+            }
+          }
+        }
+        #opening,
+        #ending {
+          #open-end {
+            button {
+              font-size: 13px;
+            }
           }
         }
       }
@@ -280,7 +260,6 @@ hr {
       }
     }
     form {
-      border: 1px solid red;
       width: 80%;
       .btnSubmit {
         font-size: 13px;
@@ -291,6 +270,26 @@ hr {
         .hard-content {
           label {
             font-size: 14px;
+          }
+        }
+        #soft-content {
+          #des,
+          #img {
+            button {
+              font-size: 12px;
+              width: 10%;
+              height: 4vh;
+            }
+          }
+        }
+        #opening,
+        #ending {
+          #open-end {
+            button {
+              font-size: 12px;
+              width: 10%;
+              height: 4vh;
+            }
           }
         }
       }
@@ -308,7 +307,6 @@ hr {
       }
     }
     form {
-      border: 1px solid red;
       width: 80%;
 
       .btnSubmit {
@@ -321,6 +319,26 @@ hr {
         .hard-content {
           label {
             font-size: 14px;
+          }
+        }
+        #soft-content {
+          #des,
+          #img {
+            button {
+              font-size: 12px;
+              width: 10%;
+              height: 4vh;
+            }
+          }
+        }
+        #opening,
+        #ending {
+          #open-end {
+            button {
+              font-size: 12px;
+              width: 10%;
+              height: 4vh;
+            }
           }
         }
       }
@@ -338,7 +356,6 @@ hr {
       }
     }
     form {
-      border: 1px solid red;
       width: 80%;
 
       .btnSubmit {
@@ -351,6 +368,26 @@ hr {
         .hard-content {
           label {
             font-size: 14px;
+          }
+        }
+        #soft-content {
+          #des,
+          #img {
+            button {
+              font-size: 12px;
+              width: 14%;
+              height: 4vh;
+            }
+          }
+        }
+        #opening,
+        #ending {
+          #open-end {
+            button {
+              font-size: 12px;
+              width: 14%;
+              height: 4vh;
+            }
           }
         }
       }
@@ -368,7 +405,6 @@ hr {
       }
     }
     form {
-      border: 1px solid red;
       width: 80%;
 
       .btnSubmit {
@@ -381,6 +417,26 @@ hr {
         .hard-content {
           label {
             font-size: 14px;
+          }
+        }
+        #soft-content {
+          #des,
+          #img {
+            button {
+              font-size: 11px;
+              width: 16%;
+              height: 4vh;
+            }
+          }
+        }
+        #opening,
+        #ending {
+          #open-end {
+            button {
+              font-size: 11px;
+              width: 16%;
+              height: 4vh;
+            }
           }
         }
       }

@@ -1,0 +1,28 @@
+.detail {
+  font-family: "Playfair Display", serif;
+  text-align: justify;
+  .content {
+    font-size: 20px;
+    .image {
+      img {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+    .des-line {
+      ul {
+        list-style-type: none;
+        li {
+          &::before {
+            content: "- ";
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 750px) {
+      font-size: 17px;
+    }
+  }
+}

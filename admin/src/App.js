@@ -16,6 +16,7 @@ const ViewEditPartner = React.lazy(() =>
 const ViewNews = React.lazy(() => import("./pages/New/ViewNews"));
 const ViewAddNews = React.lazy(() => import("./pages/New/ViewAddNews"));
 const ViewEditNews = React.lazy(() => import("./pages/New/ViewEditNews"));
+const ViewNewsDetail = React.lazy(() => import("./pages/New/ViewNewsDetail"));
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/news" element={<ViewNews />} />
           <Route path="/news/create" element={<ViewAddNews />} />
           <Route path="/news/:slug" element={<ViewEditNews />} />
+          <Route path="/news/:slug/detail" element={<ViewNewsDetail />} />
           <Route path="/loading" element={<Loading />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

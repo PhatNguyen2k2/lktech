@@ -51,7 +51,7 @@ const Partners = () => {
                 <br />
                 Ứng dụng:
                 <ul>
-                  {partner.application.map((app) => (
+                  {partner.application.split("; ").map((app) => (
                     <li>{app}</li>
                   ))}
                 </ul>

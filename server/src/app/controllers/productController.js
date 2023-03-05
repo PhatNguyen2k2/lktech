@@ -1,20 +1,30 @@
-const New = require('../models/new');
+const Product = new require('../models/product');
 
-class NewController {
-  //[GET] /news
+class ProductController {
+  //[GET] /products/
   async show(req, res) {
-    New.find({})
-      .then((news) => {
-        res.status(200).json({ success: true, news });
+    Product.find({})
+      .then((product) => {
+        res.status(200).json({ success: true, product });
       })
       .catch((err) => {
         res.status(500).json({ success: false, err });
       });
   }
-  //[POST] /news/create
+  //[GET] /products/:slug
+  async detail(req, res) {
+    Product.findOne({ slug: req.params.slug })
+      .then((product) => {
+        res.status(200).json({ success: true, product });
+      })
+      .catch((err) => {
+        res.status(500).json({ success: false, err });
+      });
+  }
+  //[POST] /products/create
   async create(req, res) {
-    const news = new New(req.body);
-    news
+    const product = new Product(req.body);
+    product
       .save()
       .then(() => {
         res.status(201).json({ success: true, message: 'successfull' });
@@ -23,19 +33,9 @@ class NewController {
         res.status(400).json({ success: false, message: err });
       });
   }
-  //[GET] /news/:slug
-  async detail(req, res) {
-    New.findOne({ slug: req.params.slug })
-      .then((news) => {
-        res.status(200).json({ success: true, news });
-      })
-      .catch((err) => {
-        res.status(500).json({ success: false, err });
-      });
-  }
-  //[PUT] /news
+  //[PUT] /products
   async edit(req, res) {
-    New.updateOne({ slug: req.params.slug }, req.body, { new: true })
+    Product.updateOne({ slug: req.params.slug }, req.body, { new: true })
       .then(() => {
         res.status(200).json({ success: true, message: 'successfully' });
       })
@@ -43,9 +43,9 @@ class NewController {
         res.status(400).json({ success: false, message: err });
       });
   }
-  //[DELETE] /news/:id
+  //[DELETE] /products/:id
   async delete(req, res) {
-    New.findByIdAndDelete(req.params.id)
+    Product.findByIdAndDelete(req.params.id)
       .then(() => {
         res.status(200).json({ success: true, message: 'successfully' });
       })
@@ -54,4 +54,5 @@ class NewController {
       });
   }
 }
-module.exports = new NewController();
+
+module.exports = new ProductController();

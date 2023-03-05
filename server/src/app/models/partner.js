@@ -7,7 +7,7 @@ const PartnerSchema = new mongoose.Schema(
     origin: { type: String, require: true },
     founding: { type: Number, require: true },
     field: { type: String, require: true },
-    application: { type: [String], require: true },
+    application: { type: String, require: true },
     logo: { type: String, require: true },
     link: { type: String, require: true },
     slug: { type: String, slug: 'name', unique: true }

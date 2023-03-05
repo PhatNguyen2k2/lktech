@@ -38,50 +38,13 @@ const AddNews = (props) => {
         <button onClick={this.parentNode.remove()}>Delete</button>
       </div>`;
   };
-  const handleFormDescription = () => {
+  const handleTitle = () => {
     let div = document.createElement("div");
-    div.setAttribute("id", "form-des");
-    div.setAttribute("style", "background-color: #C6CED6");
-    div.innerHTML = `
-      <label>Title<br/>
-          <input type="text" name="title"></input>
-      </label>
-      <label>Image<br/>
-          <input type="text" name="img"></input>
-      </label>
-      <label>Description<br/>
-          <textarea name="form-description"></textarea>
-      </label>
-      <button onClick={this.parentNode.remove()}>Delete</button>`;
-    document.getElementById("soft-content").appendChild(div);
-  };
-  const handleFormDescriptionLine = () => {
-    let div = document.createElement("div");
-    div.setAttribute("id", "form-des");
+    div.setAttribute("id", "des");
     div.setAttribute("style", "background-color: #ABB0BE");
     div.innerHTML = `
       <label>Title<br/>
-          <input type="text" name="title"></input>
-      </label>
-      <label>Image<br/>
-          <input type="text" name="img"></input>
-      </label>
-      <label>Description in line<br/>
-          <textarea name="form-description_line" placeholder="use ',' to cut line"></textarea>
-      </label>
-      <button onClick={this.parentNode.remove()}>Delete</button>`;
-    document.getElementById("soft-content").appendChild(div);
-  };
-  const handleFormWithoutImage = () => {
-    let div = document.createElement("div");
-    div.setAttribute("id", "form-des");
-    div.setAttribute("style", "background-color: #ABB0BE");
-    div.innerHTML = `
-      <label>Title<br/>
-          <input type="text" name="title"></input>
-      </label>
-      <label>Description<br/>
-          <textarea name="form-withoutImage"></textarea>
+        <textarea name="title"></textarea>
       </label>
       <button onClick={this.parentNode.remove()}>Delete</button>`;
     document.getElementById("soft-content").appendChild(div);
@@ -103,7 +66,7 @@ const AddNews = (props) => {
     div.setAttribute("style", "background-color: #887285");
     div.innerHTML = `
       <label>Description in line<br/>
-          <textarea name="description_line" placeholder="use ',' to cut line"></textarea>
+          <textarea name="description_line" placeholder="use ';' to cut line"></textarea>
       </label>
       <button onClick={this.parentNode.remove()}>Delete</button>`;
     document.getElementById("soft-content").appendChild(div);
@@ -147,21 +110,7 @@ const AddNews = (props) => {
         case "title":
           newDes = {};
           newDes.title = input.value;
-          break;
-        case "img":
-          newDes.image = input.value;
-          break;
-        case "form-description":
-          newDes.description = input.value;
-          newDes.type = "form_description";
-          newNews.paragraph.push(newDes);
-          break;
-        case "form-description_line":
-          newDes.type = "form_description_line";
-          newNews.paragraph.push(newDes);
-          break;
-        case "form-withoutImage":
-          newDes.type = "form_without_image";
+          newDes.type = "title";
           newNews.paragraph.push(newDes);
           break;
         case "description":
@@ -187,6 +136,7 @@ const AddNews = (props) => {
           break;
       }
     });
+    console.log(newNews);
     const res = await axios.post("http://localhost:8000/news/create", newNews);
     setNoti(res.status);
     setCheckSuccess(true);
@@ -211,23 +161,7 @@ const AddNews = (props) => {
         case "title":
           newDes = {};
           newDes.title = input.value;
-          break;
-        case "img":
-          newDes.image = input.value;
-          break;
-        case "form-description":
-          newDes.description = input.value;
-          newDes.type = "form_description";
-          newNews.paragraph.push(newDes);
-          break;
-        case "form-description_line":
-          newDes.descriptionLine = input.value;
-          newDes.type = "form_description_line";
-          newNews.paragraph.push(newDes);
-          break;
-        case "form-withoutImage":
-          newDes.description = input.value;
-          newDes.type = "form_without_image";
+          newDes.type = "title";
           newNews.paragraph.push(newDes);
           break;
         case "description":
@@ -257,6 +191,9 @@ const AddNews = (props) => {
     setNoti(res.status);
     setCheckSuccess(true);
   }
+  const handleDelete = (e) => {
+    e.currentTarget.parentElement.remove();
+  };
   return (
     <>
       {news === null ? (
@@ -275,24 +212,10 @@ const AddNews = (props) => {
               </button>
               <button
                 className="btnCtrl"
-                style={{ backgroundColor: "#C6CED6" }}
-                onClick={handleFormDescription}
-              >
-                Form Description
-              </button>
-              <button
-                className="btnCtrl"
                 style={{ backgroundColor: "#ABB0BE" }}
-                onClick={handleFormDescriptionLine}
+                onClick={handleTitle}
               >
-                Form Description with line
-              </button>
-              <button
-                className="btnCtrl"
-                style={{ backgroundColor: "#ABB0BE" }}
-                onClick={handleFormWithoutImage}
-              >
-                Form without image
+                Title
               </button>
               <button
                 className="btnCtrl"
@@ -376,107 +299,29 @@ const AddNews = (props) => {
                             defaultValue={news.opening}
                           ></textarea>
                         </label>
+                        <button onClick={handleDelete}>Delete</button>
                       </div>
                     )}
                   </div>
                   <div id="soft-content">
                     {news.paragraph.map((p, index) => {
                       switch (p.type) {
-                        case "form_description":
+                        case "title":
                           return (
                             <div
-                              id="form-des"
-                              style={{ backgroundColor: "#C6CED6" }}
-                              key={index + 1}
-                            >
-                              <label>
-                                Title
-                                <br />
-                                <input
-                                  type="text"
-                                  name="title"
-                                  defaultValue={p.title}
-                                ></input>
-                              </label>
-                              <label>
-                                Image
-                                <br />
-                                <input
-                                  type="text"
-                                  name="img"
-                                  defaultValue={p.image}
-                                ></input>
-                              </label>
-                              <label>
-                                Description
-                                <br />
-                                <textarea
-                                  name="form-description"
-                                  defaultValue={p.description}
-                                ></textarea>
-                              </label>
-                            </div>
-                          );
-                        case "form_description_line":
-                          return (
-                            <div
-                              id="form-des"
+                              id="des"
                               style={{ backgroundColor: "#ABB0BE" }}
                               key={index + 1}
                             >
                               <label>
                                 Title
                                 <br />
-                                <input
-                                  type="text"
+                                <textarea
                                   name="title"
                                   defaultValue={p.title}
-                                ></input>
-                              </label>
-                              <label>
-                                Image
-                                <br />
-                                <input
-                                  type="text"
-                                  name="img"
-                                  defaultValue={p.image}
-                                ></input>
-                              </label>
-                              <label>
-                                Description in line
-                                <br />
-                                <textarea
-                                  name="form-description_line"
-                                  placeholder="use ',' to cut line"
-                                  defaultValue={p.descriptionLine}
                                 ></textarea>
                               </label>
-                            </div>
-                          );
-                        case "form_without_image":
-                          return (
-                            <div
-                              id="form-des"
-                              style={{ backgroundColor: "#ABB0BE" }}
-                              key={index + 1}
-                            >
-                              <label>
-                                Title
-                                <br />
-                                <input
-                                  type="text"
-                                  name="title"
-                                  defaultValue={p.title}
-                                ></input>
-                              </label>
-                              <label>
-                                Description
-                                <br />
-                                <textarea
-                                  name="form-withoutImage"
-                                  defaultValue={p.description}
-                                ></textarea>
-                              </label>
+                              <button onClick={handleDelete}>Delete</button>
                             </div>
                           );
                         case "description":
@@ -494,6 +339,7 @@ const AddNews = (props) => {
                                   defaultValue={p.description}
                                 ></textarea>
                               </label>
+                              <button onClick={handleDelete}>Delete</button>
                             </div>
                           );
                         case "description_line":
@@ -508,10 +354,11 @@ const AddNews = (props) => {
                                 <br />
                                 <textarea
                                   name="description_line"
-                                  placeholder="use ',' to cut line"
+                                  placeholder="use ';' to cut line"
                                   defaultValue={p.descriptionLine}
                                 ></textarea>
                               </label>
+                              <button onClick={handleDelete}>Delete</button>
                             </div>
                           );
                         case "image":
@@ -526,6 +373,7 @@ const AddNews = (props) => {
                                   defaultValue={p.image}
                                 ></input>
                               </label>
+                              <button onClick={handleDelete}>Delete</button>
                             </div>
                           );
                         default:
@@ -544,6 +392,7 @@ const AddNews = (props) => {
                             defaultValue={news.ending || ""}
                           ></textarea>
                         </label>
+                        <button onClick={handleDelete}>Delete</button>
                       </div>
                     )}
                   </div>

@@ -15,8 +15,8 @@ const PartnerShow = () => {
     <Container fluid="xxl">
       <div className="Pnlogo">
         {logo.length > 0 &&
-          logo.map((lg) => (
-            <a href={lg.link} target="_blank">
+          logo.map((lg, index) => (
+            <a href={lg.link} key={index} target="_blank">
               <img className="imagelogo" src={lg.logo} />
             </a>
           ))}

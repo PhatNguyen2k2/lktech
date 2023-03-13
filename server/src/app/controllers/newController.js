@@ -4,6 +4,7 @@ class NewController {
   //[GET] /news
   async show(req, res) {
     New.find({})
+      .sort({ createdAt: -1 })
       .then((news) => {
         res.status(200).json({ success: true, news });
       })
@@ -25,13 +26,23 @@ class NewController {
   }
   //[GET] /news/:slug
   async detail(req, res) {
-    New.findOne({ slug: req.params.slug })
-      .then((news) => {
-        res.status(200).json({ success: true, news });
+    Promise.all([
+      New.findOne({ slug: req.params.slug }),
+      New.find({ slug: { $ne: req.params.slug } }).sort({ createdAt: -1 })
+    ])
+      .then(([detail, more]) => {
+        res.status(200).json({ success: true, detail, more });
       })
       .catch((err) => {
         res.status(500).json({ success: false, err });
       });
+    // New.findOne({ slug: req.params.slug })
+    //   .then((news) => {
+    //     res.status(200).json({ success: true, news });
+    //   })
+    //   .catch((err) => {
+    //     res.status(500).json({ success: false, err });
+    //   });
   }
   //[PUT] /news
   async edit(req, res) {

@@ -15,6 +15,8 @@ const ViewMachining = React.lazy(() =>
 );
 const ViewAdvice = React.lazy(() => import("./pages/Services/ViewAdvice"));
 const ViewPartners = React.lazy(() => import("./pages/ViewPartners"));
+const ViewNews = React.lazy(() => import("./pages/News/ViewNews"));
+const ViewNewsDetail = React.lazy(() => import("./pages/News/ViewNewsDetail"));
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/machining" element={<ViewMachining />} />
           <Route path="/advice" element={<ViewAdvice />} />
           <Route path="/partners" element={<ViewPartners />} />
+          <Route path="/news" element={<ViewNews />} />
+          <Route path="/news/:slug/detail" element={<ViewNewsDetail />} />
           <Route path="/loading" element={<Loading />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

@@ -54,7 +54,7 @@ const Header = () => {
                 />{" "}
                 Đối tác
               </Nav.Link>
-              <Nav.Link href="/" className="textOne">
+              <Nav.Link href="/news" className="textOne">
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676999368/ICON/ezgif.com-resize_j5wedw.gif"

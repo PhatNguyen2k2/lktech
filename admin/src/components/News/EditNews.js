@@ -311,7 +311,7 @@ const AddNews = (props) => {
                             <div
                               id="des"
                               style={{ backgroundColor: "#ABB0BE" }}
-                              key={index + 1}
+                              key={index}
                             >
                               <label>
                                 Title
@@ -329,7 +329,7 @@ const AddNews = (props) => {
                             <div
                               id="des"
                               style={{ backgroundColor: "#9791A4" }}
-                              key={index + 1}
+                              key={index}
                             >
                               <label>
                                 Description
@@ -347,7 +347,7 @@ const AddNews = (props) => {
                             <div
                               id="des"
                               style={{ backgroundColor: "#887285" }}
-                              key={index + 1}
+                              key={index}
                             >
                               <label>
                                 Description in line
@@ -363,7 +363,7 @@ const AddNews = (props) => {
                           );
                         case "image":
                           return (
-                            <div id="img" key={index + 1}>
+                            <div id="img" key={index}>
                               <label>
                                 Image
                                 <br />

@@ -48,7 +48,7 @@ const News = () => {
           {news.length > 0 &&
             news.map((item, index) => (
               <tr className="tr-news" key={index}>
-                <td>{index + 1}</td>
+                <td>{index}</td>
                 <td className="td-image">
                   <img
                     className="news-image"
@@ -56,7 +56,9 @@ const News = () => {
                     alt={item.name}
                   />
                 </td>
-                <td className="td-name">{item.name}</td>
+                <td className="td-name">
+                  <a href={`./news/${item.slug}/detail`}>{item.name}</a>
+                </td>
                 <td>{item.createdAt}</td>
                 <td>
                   <button

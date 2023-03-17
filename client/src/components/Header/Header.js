@@ -4,13 +4,15 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Form from "react-bootstrap/Form";
+import { useNavigate } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <Navbar key={"lg"} bg="light" expand={"lg"} className="mb-3 header">
       <Container fluid>
-        <Navbar.Brand className="logoBranch" href="/">
+        <Navbar.Brand className="logoBranch" onClick={() => navigate("/")}>
           <img
             className="logo"
             src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022120/ICON/logo_zxf49n.png"
@@ -30,7 +32,7 @@ const Header = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-center flex-grow-1 pe-3 textMenu">
-              <Nav.Link href="/" className="textOne">
+              <Nav.Link onClick={() => navigate("/")} className="textOne">
                 <img
                   className="image"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1677207311/ICON/icons8-home-page_wdrltd.gif"
@@ -38,7 +40,7 @@ const Header = () => {
                 />{" "}
                 Trang chủ
               </Nav.Link>
-              <Nav.Link href="/" className="textOne">
+              <Nav.Link onClick={() => navigate("/")} className="textOne">
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676999030/ICON/icons8-robot_zdy1uf.gif"
@@ -46,7 +48,10 @@ const Header = () => {
                 />{" "}
                 Sản phẩm
               </Nav.Link>
-              <Nav.Link href="/partners" className="textOne">
+              <Nav.Link
+                onClick={() => navigate("/partners")}
+                className="textOne"
+              >
                 <img
                   className="image"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1677207337/ICON/icons8-handshake_vgc0wc.gif"
@@ -54,7 +59,7 @@ const Header = () => {
                 />{" "}
                 Đối tác
               </Nav.Link>
-              <Nav.Link href="/news" className="textOne">
+              <Nav.Link onClick={() => navigate("/news")} className="textOne">
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676999368/ICON/ezgif.com-resize_j5wedw.gif"

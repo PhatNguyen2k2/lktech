@@ -6,6 +6,6 @@ router.post('/create', NewController.create);
 router.put('/:slug', NewController.edit);
 router.delete('/:id', NewController.delete);
 router.get('/:slug', NewController.detail);
-router.get('/', NewController.show);
+router.get('/show/:page', NewController.show);
 
 module.exports = router;

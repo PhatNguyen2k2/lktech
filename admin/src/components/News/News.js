@@ -4,8 +4,8 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
+import { useNavigate, Link } from "react-router-dom";
 import "./News.scss";
-import { useNavigate } from "react-router-dom";
 
 const News = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const News = () => {
     setNewsId(e);
   };
   async function getNews() {
-    const res = await axios.get("http://localhost:8000/news");
+    const res = await axios.get("http://localhost:8000/news/show/0");
     setNews(res.data.news);
   }
   async function deleteNews() {
@@ -48,7 +48,7 @@ const News = () => {
           {news.length > 0 &&
             news.map((item, index) => (
               <tr className="tr-news" key={index}>
-                <td>{index}</td>
+                <td>{index + 1}</td>
                 <td className="td-image">
                   <img
                     className="news-image"
@@ -57,7 +57,7 @@ const News = () => {
                   />
                 </td>
                 <td className="td-name">
-                  <a href={`./news/${item.slug}/detail`}>{item.name}</a>
+                  <Link to={`/news/${item.slug}/detail`}>{item.name}</Link>
                 </td>
                 <td>{item.createdAt}</td>
                 <td>

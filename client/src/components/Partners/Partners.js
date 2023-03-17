@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "./Partners.scss";
 
 const Partners = () => {
-  const navigate = useNavigate();
   const [partners, setPartners] = useState([]);
   async function getPartners() {
     const res = await axios.get("http://localhost:8000/partners");
@@ -29,8 +27,8 @@ const Partners = () => {
         </p>
       </div>
       {partners.length > 0 &&
-        partners.map((partner) => (
-          <div className="partner">
+        partners.map((partner, index) => (
+          <div className="partner" key={index}>
             <div className="logo_name">
               <AnimationOnScroll
                 animateIn="animate__fadeInUp"
@@ -38,27 +36,30 @@ const Partners = () => {
                 duration={0.4}
               >
                 <h2 className="namePartner">{partner.name}</h2>
-                <img className="img" src={partner.logo} />
+                <img className="img" src={partner.logo} alt={partner.name} />
               </AnimationOnScroll>
             </div>
             <div className="partner_info">
-              <p>
-                Xuất xứ: {partner.origin}
-                <br />
-                Ngày thành lập: {partner.founding}
-                <br />
-                Lĩnh vực: {partner.field}
-                <br />
-                Ứng dụng:
-                <ul>
-                  {partner.application.split("; ").map((app) => (
-                    <li>{app}</li>
-                  ))}
-                </ul>
-                <a class="learn-more" href={partner.link}>
-                  {partner.link}
-                </a>
-              </p>
+              Xuất xứ: {partner.origin}
+              <br />
+              Ngày thành lập: {partner.founding}
+              <br />
+              Lĩnh vực: {partner.field}
+              <br />
+              Ứng dụng:
+              <ul>
+                {partner.application.split("; ").map((app, index) => (
+                  <li key={index}>{app}</li>
+                ))}
+              </ul>
+              <a
+                className="learn-more"
+                href={partner.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {partner.link}
+              </a>
             </div>
           </div>
         ))}

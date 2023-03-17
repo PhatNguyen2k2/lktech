@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./WatchMoreNews.scss";
 const WatchMoreNews = (props) => {
   const navigate = useNavigate();
   const [news, setNews] = useState({});
   const [description, setDescription] = useState("");
-  const getDescription = () => {
+  const getDescription = useCallback(() => {
     if (Object.keys(news).length > 0) {
       news.paragraph.every((p) => {
         if (p.type === "description") {
@@ -15,7 +15,7 @@ const WatchMoreNews = (props) => {
         return true;
       });
     }
-  };
+  }, [news]);
   const handleOnclick = () => {
     navigate(`/news/${news.slug}/detail`);
     window.location.reload();
@@ -25,11 +25,11 @@ const WatchMoreNews = (props) => {
       setNews(props.data);
       getDescription();
     }
-  }, [props.data]);
+  }, [props.data, getDescription]);
   return (
     <div className="moreNews" onClick={handleOnclick}>
       <div className="imgNews">
-        <img src={news.image} href={news.name} />
+        <img src={news.image} alt={news.name} />
       </div>
       <div className="desNews">
         <h3>{news.name}</h3>

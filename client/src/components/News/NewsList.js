@@ -7,22 +7,33 @@ import Pagination from "react-bootstrap/Pagination";
 import News from "./News";
 const NewsList = () => {
   const [news, setNews] = useState([]);
-  let active = 2;
+  const [page, setPage] = useState(0);
+  const [active, setActive] = useState(1);
   let items = [];
-  for (let number = 1; number <= 5; number++) {
+  for (let number = 1; page !== 0 && number <= page; number++) {
     items.push(
-      <Pagination.Item key={number} active={number === active}>
+      <Pagination.Item
+        key={number}
+        active={number === active}
+        onClick={getNewsList}
+      >
         {number}
       </Pagination.Item>
     );
   }
-  async function getNewsList() {
-    const res = await axios.get("http://localhost:8000/news");
+  async function getNewsList(e) {
+    const res = await axios.get(
+      `http://localhost:8000/news/show/${
+        e !== undefined ? e.target.textContent : "1"
+      }`
+    );
+    e !== undefined && setActive(Number(e.target.textContent));
     setNews(res.data.news);
+    setPage(res.data.count);
   }
   useEffect(() => {
     getNewsList();
-  }, []);
+  }, [page]);
   return (
     <Container fluid="xxl">
       <Row>
@@ -34,10 +45,13 @@ const NewsList = () => {
           ))}
       </Row>
       <Pagination className="justify-content-center">
-        <Pagination.First />
-        <Pagination.Prev />
+        <Pagination.First
+          onClick={() => {
+            setPage(1);
+            setActive(1);
+          }}
+        />
         {items}
-        <Pagination.Next />
         <Pagination.Last />
       </Pagination>
     </Container>

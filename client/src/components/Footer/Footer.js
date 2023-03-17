@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -19,13 +20,13 @@ const Footer = () => {
           <ul className="ulService">
             <strong>DỊCH VỤ HỖ TRỢ</strong>
             <li>
-              <a href="/maintenance"> Bảo trì</a>
+              <Link to="/maintenance"> Bảo trì</Link>
             </li>
             <li>
-              <a href="/machining">Gia công Hàn & Cắt Laser</a>
+              <Link to="/machining">Gia công Hàn & Cắt Laser</Link>
             </li>
             <li>
-              <a href="/advice">Tư vấn & thi công hệ thống khí</a>
+              <Link to="/advice">Tư vấn & thi công hệ thống khí</Link>
             </li>
           </ul>
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import "./News.scss";
@@ -7,7 +7,7 @@ const News = (props) => {
   const navigate = useNavigate();
   const [news, setNews] = useState({});
   const [description, setDescription] = useState("");
-  const getDescription = () => {
+  const getDescription = useCallback(() => {
     if (Object.keys(news).length > 0) {
       news.paragraph.every((p) => {
         if (p.type === "description") {
@@ -17,20 +17,20 @@ const News = (props) => {
         return true;
       });
     }
-  };
-  const handleClick = () => {
-    navigate(`/news/${news.slug}/detail`);
-  };
+  }, [news]);
   useEffect(() => {
     if (props.data) {
       setNews(props.data);
       getDescription();
     }
-  }, [props.data]);
+  }, [props.data, getDescription]);
   return (
     <>
       {Object.keys(news).length > 0 && (
-        <Card className="card" onClick={handleClick}>
+        <Card
+          className="card"
+          onClick={() => navigate(`/news/${news.slug}/detail`)}
+        >
           <div className="image">
             <Card.Img className="img" variant="top" src={news.image} />
           </div>

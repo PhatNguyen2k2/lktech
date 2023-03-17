@@ -17,6 +17,8 @@ const Banner = () => {
       case "chemical":
         setBtnChange(3);
         break;
+      default:
+        break;
     }
   };
   useEffect(() => {

@@ -1,16 +1,27 @@
 const New = require('../models/new');
 
 class NewController {
-  //[GET] /news
+  //[GET] /news/show/:page
   async show(req, res) {
-    New.find({})
-      .sort({ createdAt: -1 })
-      .then((news) => {
-        res.status(200).json({ success: true, news });
-      })
-      .catch((err) => {
-        res.status(500).json({ success: false, err });
-      });
+    req.params.page === '0'
+      ? New.find({})
+          .sort({ createdAt: -1 })
+          .then((news) => res.status(200).json({ success: true, news }))
+          .catch((err) => res.status(500).json({ success: false, err }))
+      : Promise.all([
+          New.find({})
+            .sort({ createdAt: -1 })
+            .skip((req.params.page - 1) * 12)
+            .limit(12),
+          New.countDocuments({})
+        ])
+          .then(([news, count]) => {
+            count = Math.ceil(count / 12);
+            res.status(200).json({ success: true, news, count });
+          })
+          .catch((err) => {
+            res.status(500).json({ success: false, err });
+          });
   }
   //[POST] /news/create
   async create(req, res) {
@@ -36,13 +47,6 @@ class NewController {
       .catch((err) => {
         res.status(500).json({ success: false, err });
       });
-    // New.findOne({ slug: req.params.slug })
-    //   .then((news) => {
-    //     res.status(200).json({ success: true, news });
-    //   })
-    //   .catch((err) => {
-    //     res.status(500).json({ success: false, err });
-    //   });
   }
   //[PUT] /news
   async edit(req, res) {

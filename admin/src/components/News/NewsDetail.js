@@ -10,7 +10,7 @@ const NewsDetail = () => {
   const [news, setNews] = useState({});
   async function getNews() {
     const res = await axios.get("http://localhost:8000/news/" + slug);
-    setNews(res.data.news);
+    setNews(res.data.detail);
   }
   useEffect(() => {
     getNews();

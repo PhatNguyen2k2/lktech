@@ -7,7 +7,7 @@ const ViewAddPartner = () => {
     <>
       <Header />
       <EditPartner />
-      <hr />
+      <br />
       <Footer />
     </>
   );

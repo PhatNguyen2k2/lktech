@@ -4,12 +4,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { useNavigate } from "react-router-dom";
 import "./Header.scss";
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <Navbar key={"lg"} bg="light" expand={"lg"} className="mb-3 header">
       <Container fluid>
-        <Navbar.Brand href="/" className="logoBranch">
+        <Navbar.Brand onClick={() => navigate("/")} className="logoBranch">
           <img
             className="logo"
             src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022120/ICON/logo_zxf49n.png"
@@ -29,7 +31,7 @@ const Header = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-center flex-grow-1 pe-3 textMenu">
-              <Nav.Link href="/" className="textOne">
+              <Nav.Link onClick={() => navigate("/")} className="textOne">
                 <img
                   className="image"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1677207311/ICON/icons8-home-page_wdrltd.gif"
@@ -37,7 +39,7 @@ const Header = () => {
                 />{" "}
                 Home
               </Nav.Link>
-              <Nav.Link href="/" className="textOne">
+              <Nav.Link onClick={() => navigate("/")} className="textOne">
                 <img
                   className="img"
                   src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676999030/ICON/icons8-robot_zdy1uf.gif"
@@ -58,10 +60,10 @@ const Header = () => {
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item href="/partner/add">
+                <NavDropdown.Item onClick={() => navigate("/partner/add")}>
                   Add partner
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/partner">
+                <NavDropdown.Item onClick={() => navigate("/partner")}>
                   View partner
                 </NavDropdown.Item>
               </NavDropdown>
@@ -78,10 +80,12 @@ const Header = () => {
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item href="/news/create">
+                <NavDropdown.Item onClick={() => navigate("/news/create")}>
                   Add news
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/news">View news</NavDropdown.Item>
+                <NavDropdown.Item onClick={() => navigate("/news")}>
+                  View news
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Offcanvas.Body>

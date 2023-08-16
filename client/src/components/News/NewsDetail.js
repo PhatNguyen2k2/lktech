@@ -17,7 +17,7 @@ const NewsDetail = () => {
   }
   useEffect(() => {
     getNews();
-  }, []);
+  }, [slug]);
   return (
     <>
       {news === null ? (

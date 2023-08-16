@@ -18,7 +18,7 @@ const WatchMoreNews = (props) => {
   }, [news]);
   const handleOnclick = () => {
     navigate(`/news/${news.slug}/detail`);
-    window.location.reload();
+    window.scrollTo(0, 0);
   };
   useEffect(() => {
     if (props.data) {

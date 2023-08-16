@@ -39,7 +39,9 @@ class NewController {
   async detail(req, res) {
     Promise.all([
       New.findOne({ slug: req.params.slug }),
-      New.find({ slug: { $ne: req.params.slug } }).sort({ createdAt: -1 })
+      New.find({ slug: { $ne: req.params.slug } })
+        .sort({ createdAt: -1 })
+        .limit(5)
     ])
       .then(([detail, more]) => {
         res.status(200).json({ success: true, detail, more });

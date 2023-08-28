@@ -1,0 +1,81 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+
+  .logoBranch {
+    max-width: 4%;
+    height: auto;
+    cursor: pointer;
+
+    .logo {
+      width: 100%;
+      display: block;
+
+      @media only screen and (max-width: 1200px) {
+        width: 9vw;
+        height: 8vh;
+      }
+
+      @media only screen and (max-width: 900px) {
+        width: 9vw;
+        height: 7vh;
+      }
+
+      @media only screen and (max-width: 800px) {
+        width: 10vw;
+      }
+
+      @media only screen and (max-width: 650px) {
+        width: 10vw;
+      }
+
+      @media only screen and (max-width: 500px) {
+        width: 11vw;
+      }
+
+      @media only screen and (max-width: 400px) {
+        width: 13vw;
+      }
+
+      @media only screen and (max-width: 300px) {
+        width: 17vw;
+      }
+    }
+  }
+
+  .textMenu {
+    .textOne {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-left: 25px;
+
+      .image {
+        background-color: #fafafa;
+      }
+    }
+  }
+
+  .searchBar {
+    position: relative;
+
+    .search-item {
+      position: absolute;
+      overflow-y: auto;
+      top: 100%;
+      width: 100%;
+      background-color: #fafafa;
+
+      li {
+        list-style-type: none;
+        padding: 10px 0 10px 15px;
+        cursor: pointer;
+
+        &:hover {
+          color: aqua;
+        }
+      }
+    }
+  }
+}

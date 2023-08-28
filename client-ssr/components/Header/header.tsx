@@ -1,11 +1,12 @@
 import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "./header.module.scss";
 
 const Header: FC = () => {
 
     return (
-        <header className="bg-light mb-3 shadow-lg sticky top-0 z-40">
+        <header className={`bg-light mb-3 shadow-lg sticky top-0 z-40 ${styles.header}`}>
             <div className="container mx-auto">
                 <div className="flex items-center justify-between p-4">
                     <Link href="/">
@@ -14,6 +15,7 @@ const Header: FC = () => {
                             alt="logo"
                             width={100}
                             height={50}
+                            className={styles.logoBranch}
                         />
                     </Link>
                     <nav className="hidden lg:flex space-x-4">

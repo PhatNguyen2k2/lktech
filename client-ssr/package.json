@@ -29,6 +29,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@types/react-animate-on-scroll": "^2.1.5",
     "prettier": "^3.0.2"
   }
 }

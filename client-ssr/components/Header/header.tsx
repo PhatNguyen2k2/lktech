@@ -1,7 +1,6 @@
 "use client"
 import { FC, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./header.module.scss";
 
 const Header: FC = () => {
@@ -52,12 +51,18 @@ const Header: FC = () => {
         //         </div>
         //     </div>
         // </header>
-        <nav className="w-full bg-gray-800 shadow">
+        <nav className="w-full bg-light sticky shadow">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                        <Link href="#">
-                            <h2 className="text-2xl text-white font-bold">NEXT JS</h2>
+                        <Link href="/">
+                            <img
+                                src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676022120/ICON/logo_zxf49n.png"
+                                alt="logo"
+                                width={100}
+                                height={50}
+                                className={styles.logo}
+                            />
                         </Link>
                         <div className="md:hidden">
                             <button
@@ -103,24 +108,24 @@ const Header: FC = () => {
                             }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-white">
+                            <li>
                                 <Link href="/">
-                                    Home
+                                    Trang chủ
                                 </Link>
                             </li>
-                            <li className="text-white">
-                                <Link href="/blogs">
-                                    Blogs
+                            <li>
+                                <Link href="/products">
+                                    Sản phẩm
                                 </Link>
                             </li>
-                            <li className="text-white">
-                                <Link href="/about">
-                                    About US
+                            <li>
+                                <Link href="/partners">
+                                    Đối tác
                                 </Link>
                             </li>
-                            <li className="text-white">
-                                <Link href="/contact">
-                                    Contact US
+                            <li>
+                                <Link href="/news">
+                                    Tin tức
                                 </Link>
                             </li>
                         </ul>
@@ -128,9 +133,6 @@ const Header: FC = () => {
                 </div>
             </div>
         </nav>
-
-
-
     );
 };
 

@@ -2,11 +2,8 @@
   margin-top: 20px;
   padding-top: 10px;
   background-color: #d6d9de !important;
-  display: flex;
   font-family: 'Playfair Display', serif;
-  flex-wrap: wrap;
   .introduce {
-    width: 80%;
     .ulIntro {
       list-style-type: none;
 
@@ -17,7 +14,6 @@
     }
   }
   .service {
-    width: 50%;
     .ulService {
       list-style-type: none;
       li {
@@ -34,9 +30,6 @@
     }
   }
   .info {
-    width: 100%;
-    // padding-left: 8%;
-    // margin-left: 10px;
     .ulInfo {
       list-style-type: none;
       inset-inline-end: 30px;

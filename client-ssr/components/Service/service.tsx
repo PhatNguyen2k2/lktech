@@ -1,46 +1,43 @@
-"use client"
 import React from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import styles from "./service.module.scss"
+import ScrollToShow from "../scrollToShow";
 
 const Service: React.FC<{ type: string }> = (props) => {
     return (
-        <div className="container">
+        <div className="mx-auto p-8">
             {props.type === "maintenance" && (
                 <>
-                    <div className={styles.maintenance}>
-                        <div className={styles.text1}>
-                            <p>
-                                <strong>
-                                    L&K Tech chuyên cung cấp dịch vụ bảo trì, bảo dưỡng và sửa
-                                    chữa nguồn các loại máy hàn công nghiệp như: MIG, TIG, Laser
-                                    và máy cắt Plasma, laser, … với đội ngũ kỹ thuật lành nghề
-                                    trên 10 năm kinh nghiệm, trình độ chuyên môn kỹ thuật cao.
-                                    Chúng tôi sẽ luôn có mặt để tư vấn, bảo trì, hỗ trợ duy trì độ
-                                    bền của máy hàn, phòng ngừa hư hỏng có thể xảy ra trong quá
-                                    trình sử dụng.
-                                </strong>
-                                <br /> <br />
-                                L&K Tech sẽ kiểm tra, bảo trì máy hàn, máy cắt theo đúng khuyến
-                                cáo và quy định của hãng sản xuất; cung cấp thiết bị, phụ tùng
-                                phục vụ cho công tác sửa chữa, thay thế, bảo dưỡng (nếu khách
-                                hàng yêu cầu).
-                            </p>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
+                            <div className={styles.text1}>
+                                <p>
+                                    <strong>
+                                        L&K Tech chuyên cung cấp dịch vụ bảo trì, bảo dưỡng và sửa
+                                        chữa nguồn các loại máy hàn công nghiệp như: MIG, TIG, Laser
+                                        và máy cắt Plasma, laser, … với đội ngũ kỹ thuật lành nghề
+                                        trên 10 năm kinh nghiệm, trình độ chuyên môn kỹ thuật cao.
+                                        Chúng tôi sẽ luôn có mặt để tư vấn, bảo trì, hỗ trợ duy trì độ
+                                        bền của máy hàn, phòng ngừa hư hỏng có thể xảy ra trong quá
+                                        trình sử dụng.
+                                    </strong>
+                                    <br /> <br />
+                                    L&K Tech sẽ kiểm tra, bảo trì máy hàn, máy cắt theo đúng khuyến
+                                    cáo và quy định của hãng sản xuất; cung cấp thiết bị, phụ tùng
+                                    phục vụ cho công tác sửa chữa, thay thế, bảo dưỡng (nếu khách
+                                    hàng yêu cầu).
+                                </p>
+                            </div>
+                            <div className={styles.image1}>
+                                <img
+                                    className={styles.img}
+                                    src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676344689/Product%20img/mayhan_twbmqx.jpg"
+                                    alt="maintenance1"
+                                />
+                            </div>
                         </div>
-                        <div className={styles.image1}>
-                            <img
-                                className={styles.img}
-                                src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676344689/Product%20img/mayhan_twbmqx.jpg"
-                                alt="maintenance1"
-                            />
-                        </div>
-                    </div>
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        animateOut="animate__fadeOutDown"
-                        duration={0.4}
-                    >
-                        <div className={styles.maintenance}>
+                    </ScrollToShow>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
                             <div className={styles.image2}>
                                 <img
                                     className={styles.img}
@@ -70,13 +67,9 @@ const Service: React.FC<{ type: string }> = (props) => {
                                 </p>
                             </div>
                         </div>
-                    </AnimationOnScroll>
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        animateOut="animate__fadeOutDown"
-                        duration={0.4}
-                    >
-                        <div className={styles.maintenance}>
+                    </ScrollToShow>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
                             <div className={styles.text1}>
                                 <p>
                                     <strong>Quy trình bảo trì máy móc của L&K Tech</strong>
@@ -114,49 +107,47 @@ const Service: React.FC<{ type: string }> = (props) => {
                                 />
                             </div>
                         </div>
-                    </AnimationOnScroll>
+                    </ScrollToShow>
                 </>
             )}
 
             {props.type === "machining" && (
                 <>
-                    <div className={styles.maintenance}>
-                        <div className={styles.text1}>
-                            <p>
-                                <strong>
-                                    Công nghệ gia công hàn & cắt laser đang rất thịnh hành trong
-                                    cuộc sống hiện nay. Để tìm được cơ sở cung cấp dịch vụ gia
-                                    công hàn & cắt laser không phải điều quá khó, tuy nhiên một
-                                    địa chỉ uy tín, chất lượng đòi hỏi khách hàng phải tìm hiểu
-                                    thật kỹ.
-                                </strong>
-                                <br />
-                                Nếu bạn cần tìm đơn vị cắt gia công hàn và cắt laser uy tín, đảm
-                                bảo chất lượng hàn cắt và giao hàng đúng hẹn. Nếu bạn không hài
-                                lòng với đơn vị đang gia công cho bạn và cần tìm nơi làm việc
-                                bài bản hơn để hợp tác lâu dài. Thì L&K Tech có thể đáp ứng nhu
-                                cầu của bạn.
-                                <br />
-                                Với hệ thống máy hàn, máy cắt laser hiện đại với công nghệ mới
-                                nhất cùng đội ngũ kỹ sư nhiều năm kinh nghiệm trong ngành cơ khí
-                                chúng tôi sẽ mang đến cho Quý khách sản phẩm chính xác, nét cắt
-                                đẹp và giá cả phù hợp nhất.
-                            </p>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
+                            <div className={styles.text1}>
+                                <p>
+                                    <strong>
+                                        Công nghệ gia công hàn & cắt laser đang rất thịnh hành trong
+                                        cuộc sống hiện nay. Để tìm được cơ sở cung cấp dịch vụ gia
+                                        công hàn & cắt laser không phải điều quá khó, tuy nhiên một
+                                        địa chỉ uy tín, chất lượng đòi hỏi khách hàng phải tìm hiểu
+                                        thật kỹ.
+                                    </strong>
+                                    <br />
+                                    Nếu bạn cần tìm đơn vị cắt gia công hàn và cắt laser uy tín, đảm
+                                    bảo chất lượng hàn cắt và giao hàng đúng hẹn. Nếu bạn không hài
+                                    lòng với đơn vị đang gia công cho bạn và cần tìm nơi làm việc
+                                    bài bản hơn để hợp tác lâu dài. Thì L&K Tech có thể đáp ứng nhu
+                                    cầu của bạn.
+                                    <br />
+                                    Với hệ thống máy hàn, máy cắt laser hiện đại với công nghệ mới
+                                    nhất cùng đội ngũ kỹ sư nhiều năm kinh nghiệm trong ngành cơ khí
+                                    chúng tôi sẽ mang đến cho Quý khách sản phẩm chính xác, nét cắt
+                                    đẹp và giá cả phù hợp nhất.
+                                </p>
+                            </div>
+                            <div className={styles.image1}>
+                                <img
+                                    className={styles.img}
+                                    src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676305760/Product%20img/gia-cong-han-cat_duemei.jpg"
+                                    alt="machining1"
+                                />
+                            </div>
                         </div>
-                        <div className={styles.image1}>
-                            <img
-                                className={styles.img}
-                                src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676305760/Product%20img/gia-cong-han-cat_duemei.jpg"
-                                alt="machining1"
-                            />
-                        </div>
-                    </div>
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        animateOut="animate__fadeOutDown"
-                        duration={0.4}
-                    >
-                        <div className={styles.maintenance}>
+                    </ScrollToShow>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
                             <div className={styles.image2}>
                                 <img
                                     className={styles.img}
@@ -173,7 +164,7 @@ const Service: React.FC<{ type: string }> = (props) => {
                                     khách hàng sẽ được phía công ty cam kết về chất lượng và tiến
                                     độ công việc. Cụ thể:
                                 </p>
-                                <ul>
+                                <ul className="list-disc ml-5">
                                     <li>
                                         Hoàn thiện chi tiết hàn và cắt với độ chính xác cực cao
                                     </li>
@@ -189,13 +180,9 @@ const Service: React.FC<{ type: string }> = (props) => {
                                 </ul>
                             </div>
                         </div>
-                    </AnimationOnScroll>
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        animateOut="animate__fadeOutDown"
-                        duration={0.4}
-                    >
-                        <div className={styles.maintenance}>
+                    </ScrollToShow>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
                             <p className={styles.text9}>
                                 <strong>Báo giá gia công hàn và cắt laser</strong>
                                 <br />
@@ -213,40 +200,38 @@ const Service: React.FC<{ type: string }> = (props) => {
                                 doanh L&K Tech liên hệ ngay!
                             </p>
                         </div>
-                    </AnimationOnScroll>
+                    </ScrollToShow>
                 </>
             )}
 
             {props.type === "advice" && (
                 <>
-                    <div className={styles.maintenance}>
-                        <div className={styles.text1}>
-                            <p>
-                                <strong>
-                                    Ngoài việc cung cấp các sản phẩm riêng lẻ, L&K Tech còn cung
-                                    cấp dịch vụ tư vấn và thi công hệ thống đường ống khí phòng
-                                    thí nghiệm và công nghiệp. Với đội ngũ kỹ sư nhiều năm kinh
-                                    nghiệm trong ngành cung cấp khí, L&K Tech cung cấp giải pháp
-                                    trọn gói cho khách hàng nhằm giúp khách tối ưu nhất chi phí
-                                    bao gồm cung cấp vật tư, thiết kế và thi công. Khách hàng
-                                    không cần tốn công để tìm nhiều nơi.
-                                </strong>
-                            </p>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
+                            <div className={styles.text1}>
+                                <p>
+                                    <strong>
+                                        Ngoài việc cung cấp các sản phẩm riêng lẻ, L&K Tech còn cung
+                                        cấp dịch vụ tư vấn và thi công hệ thống đường ống khí phòng
+                                        thí nghiệm và công nghiệp. Với đội ngũ kỹ sư nhiều năm kinh
+                                        nghiệm trong ngành cung cấp khí, L&K Tech cung cấp giải pháp
+                                        trọn gói cho khách hàng nhằm giúp khách tối ưu nhất chi phí
+                                        bao gồm cung cấp vật tư, thiết kế và thi công. Khách hàng
+                                        không cần tốn công để tìm nhiều nơi.
+                                    </strong>
+                                </p>
+                            </div>
+                            <div className={styles.image1}>
+                                <img
+                                    className={styles.img}
+                                    src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676343536/Product%20img/he-thong-khi-3_qmbos5.png"
+                                    alt="advice1"
+                                />
+                            </div>
                         </div>
-                        <div className={styles.image1}>
-                            <img
-                                className={styles.img}
-                                src="https://res.cloudinary.com/dwpjjpgrz/image/upload/v1676343536/Product%20img/he-thong-khi-3_qmbos5.png"
-                                alt="advice1"
-                            />
-                        </div>
-                    </div>
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        animateOut="animate__fadeOutDown"
-                        duration={0.4}
-                    >
-                        <div className={styles.maintenance}>
+                    </ScrollToShow>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
                             <div className={styles.image2}>
                                 <img
                                     className={styles.img}
@@ -265,7 +250,7 @@ const Service: React.FC<{ type: string }> = (props) => {
                                     hệ thống khí, L&K Tech sẽ giúp khách hàng lựa chọn giải pháp
                                     phù hợp nhất. Các giải pháp bao gồm:
                                 </p>
-                                <ul>
+                                <ul className="list-disc ml-5">
                                     <li>
                                         Khảo sát để tìm hiểu các thông số cần thiết và kết cấu hiện
                                         hữu
@@ -290,13 +275,9 @@ const Service: React.FC<{ type: string }> = (props) => {
                                 </p>
                             </div>
                         </div>
-                    </AnimationOnScroll>
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        animateOut="animate__fadeOutDown"
-                        duration={0.4}
-                    >
-                        <div className={styles.maintenance}>
+                    </ScrollToShow>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
                             <div className={styles.text1}>
                                 <p>
                                     <strong>
@@ -340,13 +321,9 @@ const Service: React.FC<{ type: string }> = (props) => {
                                 />
                             </div>
                         </div>
-                    </AnimationOnScroll>
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        animateOut="animate__fadeOutDown"
-                        duration={0.4}
-                    >
-                        <div className={styles.maintenance}>
+                    </ScrollToShow>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
                             <div className={styles.image2}>
                                 <img
                                     className={styles.img}
@@ -386,13 +363,9 @@ const Service: React.FC<{ type: string }> = (props) => {
                                 </ul>
                             </div>
                         </div>
-                    </AnimationOnScroll>
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        animateOut="animate__fadeOutDown"
-                        duration={0.4}
-                    >
-                        <div className={styles.maintenance}>
+                    </ScrollToShow>
+                    <ScrollToShow>
+                        <div className={`flex items-center justify-around ${styles.maintenance}`}>
                             <p className={styles.text9}>
                                 Nếu Khách hàng có nhu cầu tư vấn và thi công hệ thống đường ống
                                 khí phòng thí nghiệm và công nghiệp thì liên lạc với chúng tôi
@@ -400,7 +373,7 @@ const Service: React.FC<{ type: string }> = (props) => {
                                 giá.
                             </p>
                         </div>
-                    </AnimationOnScroll>
+                    </ScrollToShow>
                 </>
             )}
         </div>

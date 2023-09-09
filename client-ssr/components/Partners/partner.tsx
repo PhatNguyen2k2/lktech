@@ -11,6 +11,7 @@ interface Partner {
     founding: number;
     field: string;
     application: string;
+    illustration: string;
 }
 const Partners: React.FC = async () => {
     const client = await clientPromise
@@ -32,36 +33,39 @@ const Partners: React.FC = async () => {
             </div>
             {partners.length > 0 &&
                 partners.map((partner, index) => (
-                    <div className={`border ${styles.partner}`} key={index}>
-                        <ScrollToShow>
-                            <div className={styles.logo_name}>
-                                <h2 className={styles.namePartner}>{partner.name}</h2>
-                                <img className={styles.img} src={partner.logo} alt={partner.name} />
+                    <ScrollToShow>
+                        <div className={styles.illustration}>
+                            <img className={styles.imgIllus} src={partner.illustration} alt={partner.name} />
+                            <div className={styles.partner} key={index}>
+                                <div className={styles.logo_name}>
+                                    <h2 className={styles.namePartner}>{partner.name}</h2>
+                                    <img className={styles.img} src={partner.logo} alt={partner.name} />
+                                </div>
+                                <div className={styles.partner_info}>
+                                    Xuất xứ: {partner.origin}
+                                    <br />
+                                    Ngày thành lập: {partner.founding}
+                                    <br />
+                                    Lĩnh vực: {partner.field}
+                                    <br />
+                                    Ứng dụng:
+                                    <ul className="list-disc ml-5">
+                                        {partner.application.split("; ").map((app, index) => (
+                                            <li key={index}>{app}</li>
+                                        ))}
+                                    </ul>
+                                    <a
+                                        className={`text-indigo-600 ${styles.learn_more}`}
+                                        href={partner.link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        {partner.link}
+                                    </a>
+                                </div>
                             </div>
-                        </ScrollToShow>
-                        <div className={styles.partner_info}>
-                            Xuất xứ: {partner.origin}
-                            <br />
-                            Ngày thành lập: {partner.founding}
-                            <br />
-                            Lĩnh vực: {partner.field}
-                            <br />
-                            Ứng dụng:
-                            <ul>
-                                {partner.application.split("; ").map((app, index) => (
-                                    <li key={index}>{app}</li>
-                                ))}
-                            </ul>
-                            <a
-                                className={styles.learn_more}
-                                href={partner.link}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                {partner.link}
-                            </a>
                         </div>
-                    </div>
+                    </ScrollToShow>
                 ))}
         </div>
     );

@@ -20,7 +20,7 @@
     "eslint-config-next": "13.4.19",
     "framer-motion": "^10.16.2",
     "mongodb": "^5.8.1",
-    "next": "13.4.19",
+    "next": "14.2.25",
     "next-cloudinary": "^4.18.1",
     "postcss": "8.4.28",
     "react": "18.2.0",
